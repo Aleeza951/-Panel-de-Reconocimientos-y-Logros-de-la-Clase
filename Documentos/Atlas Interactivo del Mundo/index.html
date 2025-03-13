@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Interactivo del Mundo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Atlas Interactivo del Mundo</h1>
+    <input type="text" id="search" placeholder="Busca un país..." autofocus list="country-list">
+    <datalist id="country-list"></datalist>
+  </header>
+
+  <main>
+    <div id="map"></div>
+    <div id="country-info">
+      <h2>Información del País</h2>
+      <div id="info"></div>
+      <div id="flag-container">
+        <img id="flag" alt="Country Flag" />
+      </div>
+      <div id="weather"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Atlas Interactivo | Síguenos en: 
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> 
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
+  
+  <div id="loading">Cargando...</div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "USA": {
+        "history": "Founded in 1776, the USA is a leading country in the Americas.",
+        "famous_landmarks": ["Statue of Liberty", "Grand Canyon", "White House"],
+        "famous_personalities": ["Abraham Lincoln", "Oprah Winfrey"]
+    },
+    "France": {
+        "history": "Known for its rich cultural history, revolution, and cuisine.",
+        "famous_landmarks": ["Eiffel Tower", "Louvre Museum"],
+        "famous_personalities": ["Napoleon Bonaparte", "Marie Curie"]
+    },
+    "Japan": {
+        "history": "Japan is known for its technological advancements and rich culture.",
+        "famous_landmarks": ["Mount Fuji", "Kyoto Temples", "Tokyo Tower"],
+        "famous_personalities": ["Emperor Akihito", "Hayao Miyazaki", "Yoko Ono"]
+    }
+}
