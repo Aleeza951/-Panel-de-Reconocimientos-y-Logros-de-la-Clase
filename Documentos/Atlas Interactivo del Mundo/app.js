@@ -6,113 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(map);
 
     const countryInfo = {
-        "USA": {
-            "history": "Founded in 1776, the USA is a leading country in the Americas.",
-            "famous_landmarks": ["Statue of Liberty", "Grand Canyon", "White House"],
-            "famous_personalities": ["Abraham Lincoln", "Oprah Winfrey"],
-            "government": "Federal Republic",
-            "famous_foods": ["Burgers", "Hot Dogs", "Apple Pie"],
-            "population_density": "36 people per square kilometer",
-            "tourist_attractions": ["Yellowstone", "Disneyland", "Niagara Falls"],
-            "language_family": "Indo-European (English)",
-            "currency_symbol": "$",
-            "flag_colors": ["Red", "White", "Blue"],
-            "national_animal": "Bald Eagle",
-            "timezone": "UTC -5 to -10",
-            "major_cities": ["New York", "Los Angeles", "Chicago"]
-        },
-        "France": {
-            "history": "Known for its rich cultural history, revolution, and cuisine.",
-            "famous_landmarks": ["Eiffel Tower", "Louvre Museum"],
-            "famous_personalities": ["Napoleon Bonaparte", "Marie Curie"],
-            "government": "Republic",
-            "famous_foods": ["Croissant", "Baguette", "Escargot"],
-            "population_density": "119 people per square kilometer",
-            "tourist_attractions": ["Versailles", "Mont Saint-Michel", "Château de Chambord"],
-            "language_family": "Indo-European (French)",
-            "currency_symbol": "€",
-            "flag_colors": ["Blue", "White", "Red"],
-            "national_animal": "Gallic Rooster",
-            "timezone": "UTC +1",
-            "major_cities": ["Paris", "Marseille", "Lyon"]
-        },
-        "Japan": {
-            "history": "Japan is known for its technological advancements and rich culture.",
-            "famous_landmarks": ["Mount Fuji", "Kyoto Temples", "Tokyo Tower"],
-            "famous_personalities": ["Emperor Akihito", "Hayao Miyazaki", "Yoko Ono"],
-            "government": "Constitutional Monarchy",
-            "famous_foods": ["Sushi", "Ramen", "Tempura"],
-            "population_density": "347 people per square kilometer",
-            "tourist_attractions": ["Hiroshima Peace Memorial", "Nara Park", "Fushimi Inari Shrine"],
-            "language_family": "Japonic (Japanese)",
-            "currency_symbol": "¥",
-            "flag_colors": ["Red", "White"],
-            "national_animal": "Japanese Macaque",
-            "timezone": "UTC +9",
-            "major_cities": ["Tokyo", "Osaka", "Kyoto"]
-        },
-        "India": {
-            "history": "India is one of the world's oldest civilizations, rich in culture and history.",
-            "famous_landmarks": ["Taj Mahal", "Qutub Minar", "Red Fort"],
-            "famous_personalities": ["Mahatma Gandhi", "Indira Gandhi"],
-            "government": "Federal Republic",
-            "famous_foods": ["Biryani", "Samosa", "Butter Chicken"],
-            "population_density": "464 people per square kilometer",
-            "tourist_attractions": ["Kerala Backwaters", "Jaipur Forts", "Golden Temple"],
-            "language_family": "Indo-European (Hindi, English)",
-            "currency_symbol": "₹",
-            "flag_colors": ["Saffron", "White", "Green"],
-            "national_animal": "Bengal Tiger",
-            "timezone": "UTC +5:30",
-            "major_cities": ["New Delhi", "Mumbai", "Bangalore"]
-        },
-        "Pakistan": {
-            "history": "Pakistan was created in 1947 as a separate nation for Muslims in South Asia.",
-            "famous_landmarks": ["Badshahi Mosque", "Lahore Fort", "Karimabad"],
-            "famous_personalities": ["Quaid-e-Azam Muhammad Ali Jinnah", "Malala Yousafzai", "Imran Khan"],
-            "government": "Islamic Republic",
-            "famous_foods": ["Biryani", "Nihari", "Seekh Kebabs"],
-            "population_density": "287 people per square kilometer",
-            "tourist_attractions": ["Fairy Meadows", "Karimabad", "Murree Hills"],
-            "language_family": "Indo-European (Urdu, Punjabi)",
-            "currency_symbol": "₨",
-            "flag_colors": ["Green", "White"],
-            "national_animal": "Markhor",
-            "timezone": "UTC +5",
-            "major_cities": ["Islamabad", "Karachi", "Lahore"]
-        },
-        "China": {
-            "history": "China is one of the oldest civilizations, with a rich history of dynasties.",
-            "famous_landmarks": ["Great Wall of China", "Forbidden City", "Terracotta Army"],
-            "famous_personalities": ["Confucius", "Mao Zedong", "Jack Ma"],
-            "government": "Communist State",
-            "famous_foods": ["Peking Duck", "Dim Sum", "Hot Pot"],
-            "population_density": "150 people per square kilometer",
-            "tourist_attractions": ["Zhangjiajie National Forest", "Potala Palace", "Yangtze River"],
-            "language_family": "Sino-Tibetan (Mandarin)",
-            "currency_symbol": "¥",
-            "flag_colors": ["Red", "Yellow"],
-            "national_animal": "Giant Panda",
-            "timezone": "UTC +8",
-            "major_cities": ["Beijing", "Shanghai", "Hong Kong"]
-        },
-        "Spain": {
-            "history": "Spain is known for its historical empires, art, and Mediterranean culture.",
-            "famous_landmarks": ["Sagrada Familia", "Alhambra", "Park Güell"],
-            "famous_personalities": ["Pablo Picasso", "Antonio Gaudí", "Salvador Dalí"],
-            "government": "Constitutional Monarchy",
-            "famous_foods": ["Paella", "Tapas", "Churros"],
-            "population_density": "93 people per square kilometer",
-            "tourist_attractions": ["La Rambla", "Costa Brava", "Seville Cathedral"],
-            "language_family": "Indo-European (Spanish)",
-            "currency_symbol": "€",
-            "flag_colors": ["Red", "Yellow"],
-            "national_animal": "Bull",
-            "timezone": "UTC +1",
-            "major_cities": ["Madrid", "Barcelona", "Seville"]
-        }
+        "USA": { "history": "Founded in 1776, the USA is a leading country in the Americas." },
+        "France": { "history": "Known for its rich cultural history, revolution, and cuisine." },
+        "Japan": { "history": "Japan is known for its technological advancements and rich culture." },
+        "India": { "history": "India is one of the world's oldest civilizations, rich in culture and history." },
+        "Pakistan": { "history": "Pakistan was created in 1947 as a separate nation for Muslims in South Asia." },
+        "China": { "history": "China is one of the oldest civilizations, with a rich history of dynasties." },
+        "Spain": { "history": "Spain is known for its historical empires, art, and Mediterranean culture." }
     };
-    
 
     // Populate country datalist for autocomplete search
     fetch('https://restcountries.com/v3.1/all')
@@ -149,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             <strong>Zona horaria:</strong> ${country.timezones.join(", ")} <br>
                             <strong>Fronteras:</strong> ${country.borders ? country.borders.join(", ") : 'N/A'} <br>
                             <strong>Historia:</strong> ${additionalInfo.history || 'N/A'} <br>
-                            <strong>Lugares famosos:</strong> ${additionalInfo.famous_landmarks ? additionalInfo.famous_landmarks.join(", ") : 'N/A'} <br>
-                            <strong>Personalidades famosas:</strong> ${additionalInfo.famous_personalities ? additionalInfo.famous_personalities.join(", ") : 'N/A'} <br>
                         `;
                         document.getElementById("flag").src = country.flags.svg;
 
@@ -195,4 +94,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Error fetching weather data: ", err);
             });
     }
+
+    // Initialize the timeline
+    const timelineJson = {
+        "title": { "text": { "headline": "Línea de Tiempo Histórica" } },
+        "events": [
+            { "start_date": { "year": "1776" }, "text": { "headline": "Independencia de EE.UU.", "text": "Estados Unidos declara su independencia de Gran Bretaña." } },
+            { "start_date": { "year": "1789" }, "text": { "headline": "Revolución Francesa", "text": "El pueblo francés se levanta contra la monarquía." } },
+            { "start_date": { "year": "1947" }, "text": { "headline": "Independencia de Pakistán", "text": "Pakistán se convierte en un país independiente." } }
+        ]
+    };
+    
+    new TL.Timeline('timeline-embed', timelineJson);
 });

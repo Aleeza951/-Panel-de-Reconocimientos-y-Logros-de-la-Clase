@@ -1,17 +1,125 @@
 {
     "USA": {
-        "history": "Founded in 1776, the USA is a leading country in the Americas.",
-        "famous_landmarks": ["Statue of Liberty", "Grand Canyon", "White House"],
-        "famous_personalities": ["Abraham Lincoln", "Oprah Winfrey"]
+      "history": "Founded in 1776, the USA is a leading country in the Americas.",
+      "famous_landmarks": ["Statue of Liberty", "Grand Canyon", "White House"],
+      "famous_personalities": ["Abraham Lincoln", "Oprah Winfrey"]
     },
     "France": {
-        "history": "Known for its rich cultural history, revolution, and cuisine.",
-        "famous_landmarks": ["Eiffel Tower", "Louvre Museum"],
-        "famous_personalities": ["Napoleon Bonaparte", "Marie Curie"]
+      "history": "Known for its rich cultural history, revolution, and cuisine.",
+      "famous_landmarks": ["Eiffel Tower", "Louvre Museum"],
+      "famous_personalities": ["Napoleon Bonaparte", "Marie Curie"]
     },
     "Japan": {
-        "history": "Japan is known for its technological advancements and rich culture.",
-        "famous_landmarks": ["Mount Fuji", "Kyoto Temples", "Tokyo Tower"],
-        "famous_personalities": ["Emperor Akihito", "Hayao Miyazaki", "Yoko Ono"]
-    }
-}
+      "history": "Japan is known for its technological advancements and rich culture.",
+      "famous_landmarks": ["Mount Fuji", "Kyoto Temples", "Tokyo Tower"],
+      "famous_personalities": ["Emperor Akihito", "Hayao Miyazaki", "Yoko Ono"]
+    },
+    
+    "title": {
+      "text": {
+        "headline": "Línea de Tiempo Histórica Global"
+      }
+    },
+    "events": [
+      {
+        "start_date": {
+          "year": "1776"
+        },
+        "text": {
+          "headline": "Independencia de EE. UU.",
+          "text": "Estados Unidos declara su independencia de Gran Bretaña."
+        }
+      },
+      {
+        "start_date": {
+          "year": "1789"
+        },
+        "text": {
+          "headline": "Revolución Francesa",
+          "text": "El pueblo francés se levanta contra la monarquía."
+        }
+      },
+      {
+        "start_date": {
+          "year": "1815"
+        },
+        "text": {
+          "headline": "Batalla de Waterloo",
+          "text": "Napoleón Bonaparte es derrotado en la batalla de Waterloo, marcando el fin de las Guerras Napoleónicas."
+        }
+      },
+      {
+        "start_date": {
+          "year": "1914"
+        },
+        "text": {
+          "headline": "Inicio de la Primera Guerra Mundial",
+          "text": "El asesinato del archiduque Francisco Fernando desencadena la Primera Guerra Mundial."
+        }
+      },
+      {
+        "start_date": {
+          "year": "1917"
+        },
+        "text": {
+          "headline": "Revolución Rusa",
+          "text": "La Revolución Rusa derroca al imperio zarista y establece el régimen comunista."
+        }
+      },
+      {
+        "start_date": {
+          "year": "1945"
+        },
+        "text": {
+          "headline": "Fin de la Segunda Guerra Mundial",
+          "text": "El final de la Segunda Guerra Mundial se marca con la rendición de Alemania y Japón."
+        }
+      },
+      {
+        "start_date": {
+          "year": "1969"
+        },
+        "text": {
+          "headline": "Llegada del Hombre a la Luna",
+          "text": "Neil Armstrong se convierte en el primer ser humano en pisar la Luna durante la misión Apolo 11."
+        }
+      },
+      {
+        "start_date": {
+          "year": "1989"
+        },
+        "text": {
+          "headline": "Caída del Muro de Berlín",
+          "text": "El Muro de Berlín cae, simbolizando el fin de la Guerra Fría y la reunificación de Alemania."
+        }
+      },
+      {
+        "start_date": {
+          "year": "2001"
+        },
+        "text": {
+          "headline": "Atentados del 11 de septiembre",
+          "text": "Una serie de atentados terroristas coordinados destruyen las Torres Gemelas en Nueva York y afectan al Pentágono."
+        }
+      },
+      {
+        "start_date": {
+          "year": "2008"
+        },
+        "text": {
+          "headline": "Crisis financiera global",
+          "text": "La quiebra de Lehman Brothers desata una crisis financiera mundial."
+        }
+      },
+      {
+        "start_date": {
+          "year": "2011"
+        },
+        "text": {
+          "headline": "Primavera Árabe",
+          "text": "Una serie de protestas y revoluciones estallan en el mundo árabe, pidiendo democracia y derechos humanos."
+        }
+      }
+    ]
+  }
+  

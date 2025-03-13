@@ -3,21 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atlas Interactivo del Mundo</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Atlas Interactivo - Mapa del Mundo</title>
+  <link rel="stylesheet" href="atlas.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
 </head>
 <body>
   <header>
-    <h1>Atlas Interactivo del Mundo</h1>
+    <h1>Atlas Interactivo - Mapa del Mundo</h1>
     <input type="text" id="search" placeholder="Busca un país..." autofocus list="country-list">
     <datalist id="country-list"></datalist>
   </header>
-
-
 
   <!-- MENÚ DE NAVEGACIÓN -->
   <nav>
@@ -31,31 +26,14 @@
     </ul>
   </nav>
 
-
-  <!-- SECCIÓN DE INTRODUCCIÓN -->
-  <section id="intro">
-    <h2>Bienvenido al Atlas Interactivo</h2>
-    <p>Explora la historia, cultura y geografía del mundo con nuestro atlas interactivo.</p>
+  <!-- SECCIÓN DEL MAPA -->
+  <section id="map-section">
+    <h2>Explora el Mundo</h2>
+    <p>Haz clic en los países para ver más información.</p>
+    <div id="map"></div>
   </section>
 
-
-  <main>
-    <div id="map"></div>
-    <div id="country-info">
-      <h2>Información del País</h2>
-      <div id="info"></div>
-      <div id="flag-container">
-        <img id="flag" alt="Country Flag" />
-      </div>
-      <div id="weather"></div>
-    </div>
-
-    <section id="history-section">
-      <h2>Historia</h2>
-      <div id="timeline-embed"></div>          
-    </section>
-  </main>
-
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 Atlas Interactivo | Síguenos en: 
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> 
@@ -63,12 +41,8 @@
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </p>
   </footer>
-  
-  <div id="loading">Cargando...</div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

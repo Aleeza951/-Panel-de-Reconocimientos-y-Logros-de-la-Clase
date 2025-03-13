@@ -1,0 +1,142 @@
+/* 🔹 VARIABLES */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --highlight-color: #f39c12;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --white-color: #fff;
+    --border-radius: 10px;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* 🔹 ESTILO GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding-top: 70px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* 🔹 ENCABEZADO */
+header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header h1:hover {
+    font-size: 32px;
+}
+
+/* 🔹 BARRA DE BÚSQUEDA */
+#search {
+    padding: 10px;
+    width: 280px;
+    margin-top: 15px;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+#search:focus {
+    border-color: var(--highlight-color);
+    background-color: var(--white-color);
+    outline: none;
+}
+
+/* 🔹 MENÚ DE NAVEGACIÓN */
+nav {
+    background: var(--secondary-color);
+    padding: 15px;
+    margin-top: 70px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+/* 🔹 SECCIÓN DE MARAVILLAS */
+#wonders-list {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wonder {
+    background-color: var(--highlight-color);
+    color: var(--white-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wonder h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 PIE DE PÁGINA */
+footer {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: var(--border-radius);
+}
+
+footer a {
+    color: var(--white-color);
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
