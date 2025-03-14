@@ -99,9 +99,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const timelineJson = {
         "title": { "text": { "headline": "Línea de Tiempo Histórica" } },
         "events": [
+            { "start_date": { "year": "-3000" }, "text": { "headline": "Primeras Civilizaciones", "text": "Surgimiento de las primeras civilizaciones en Mesopotamia y Egipto." } },
+            { "start_date": { "year": "-776" }, "text": { "headline": "Primeros Juegos Olímpicos", "text": "Se celebran los primeros Juegos Olímpicos en la antigua Grecia." } },
+            { "start_date": { "year": "476" }, "text": { "headline": "Caída del Imperio Romano", "text": "Fin del Imperio Romano de Occidente, marcando el inicio de la Edad Media." } },
+            { "start_date": { "year": "622" }, "text": { "headline": "Hégira de Mahoma", "text": "Mahoma y sus seguidores emigran a Medina, marcando el inicio del calendario islámico." } },
+            { "start_date": { "year": "1492" }, "text": { "headline": "Descubrimiento de América", "text": "Cristóbal Colón llega a América bajo el patrocinio de los Reyes Católicos." } },
             { "start_date": { "year": "1776" }, "text": { "headline": "Independencia de EE.UU.", "text": "Estados Unidos declara su independencia de Gran Bretaña." } },
             { "start_date": { "year": "1789" }, "text": { "headline": "Revolución Francesa", "text": "El pueblo francés se levanta contra la monarquía." } },
-            { "start_date": { "year": "1947" }, "text": { "headline": "Independencia de Pakistán", "text": "Pakistán se convierte en un país independiente." } }
+            { "start_date": { "year": "1865" }, "text": { "headline": "Abolición de la Esclavitud en EE.UU.", "text": "Se aprueba la Decimotercera Enmienda, que prohíbe la esclavitud." } },
+            { "start_date": { "year": "1914" }, "text": { "headline": "Primera Guerra Mundial", "text": "Comienza la Primera Guerra Mundial tras el asesinato del archiduque Francisco Fernando." } },
+            { "start_date": { "year": "1939" }, "text": { "headline": "Segunda Guerra Mundial", "text": "Comienza la Segunda Guerra Mundial con la invasión de Polonia por Alemania." } },
+            { "start_date": { "year": "1947" }, "text": { "headline": "Independencia de Pakistán", "text": "Pakistán se convierte en un país independiente." } },
+            { "start_date": { "year": "1969" }, "text": { "headline": "Llegada a la Luna", "text": "La misión Apollo 11 lleva a Neil Armstrong a pisar la Luna." } },
+            { "start_date": { "year": "1989" }, "text": { "headline": "Caída del Muro de Berlín", "text": "El Muro de Berlín cae, marcando el fin de la Guerra Fría." } },
+            { "start_date": { "year": "2001" }, "text": { "headline": "Atentados del 11 de septiembre", "text": "Ataques terroristas en EE.UU. que cambian la política global." } },
+            { "start_date": { "year": "2020" }, "text": { "headline": "Pandemia de COVID-19", "text": "El mundo enfrenta una pandemia global debido al coronavirus." } }
         ]
     };
     

@@ -9,8 +9,6 @@
 <body>
   <header>
     <h1>Civilizaciones Antiguas</h1>
-    <input type="text" id="search" placeholder="Busca una civilización..." autofocus list="civilization-list">
-    <datalist id="civilization-list"></datalist>
   </header>
 
   <!-- MENÚ DE NAVEGACIÓN -->
@@ -34,29 +32,81 @@
   <main>
     <section id="ancient-civilizations">
       <h2>Civilizaciones Destacadas</h2>
+      
+      <!-- Egipto -->
       <div class="civilization">
         <h3>Egipto</h3>
-        <p>Una de las civilizaciones más antiguas, famosa por sus pirámides y faraones.</p>
+        <img src="egipto.webp" alt="Egipto" class="civilization-image">
+        <button class="info-button" onclick="toggleInfo('egypt-info')">Ver Información</button>
+        <div id="egypt-info" class="civilization-info">
+          <h4>Pirámides de Egipto</h4>
+          <p>Egipto es conocido por sus pirámides, faraones y avances en la medicina, matemáticas, y astronomía. Fue una de las civilizaciones más poderosas y duraderas de la historia.</p>
+          <p>Las pirámides egipcias son una de las maravillas más emblemáticas de la antigüedad. Fueron construidas principalmente como tumbas para los faraones y algunos de sus altos funcionarios. La más famosa es la Gran Pirámide de Giza, que fue construida durante el reinado del faraón Keops. Las pirámides fueron consideradas estructuras de gran importancia religiosa, ya que se creía que servían como escalones para que el faraón ascendiera al cielo y se uniera con los dioses.</p>
+
+          <img src="fraones.jpeg" alt="Faraones de Egipto" class="civilization-image">
+          <h4>Faraones</h4>
+          <p>Los faraones eran los monarcas de Egipto y se consideraban dioses en la Tierra. Gobernaban con poder absoluto y tenían una función religiosa, política y militar. Algunos de los faraones más conocidos son:</p>
+          <ul>
+            <li><strong>Tutankamón:</strong> Famoso por su tumba intacta, que contenía tesoros incomparables.</li>
+            <li><strong>Ramsés II:</strong> También conocido como Ramsés el Grande, es recordado por sus logros militares y su extenso programa de construcción.</li>
+            <li><strong>Cleopatra VII:</strong> La última faraona de Egipto, famosa por su inteligencia, belleza y su relación con Julio César y Marco Antonio.</li>
+          </ul>
+
+          <img src="medicina.webp" alt="Avances en Medicina de Egipto" class="civilization-image">
+          <h4>Avances en Medicina</h4>
+          <p>Los egipcios fueron pioneros en el campo de la medicina. Practicaban la cirugía, la medicina preventiva, y tenían conocimientos avanzados sobre anatomía y fisiología, adquiridos a través de la momificación. Los médicos egipcios eran expertos en el tratamiento de heridas y fracturas, y ya utilizaban remedios herbales. Los egipcios también documentaron enfermedades y sus tratamientos en papiros médicos, como el Papiro Ebers.</p>
+
+          <img src="numero.jpeg" alt="Avances en Matemáticas de Egipto" class="civilization-image">
+          <h4>Avances en Matemáticas</h4>
+          <p>Los egipcios desarrollaron un sistema matemático basado en la aritmética y la geometría. Eran expertos en medir tierras y construcciones, como lo demuestran las dimensiones precisas de las pirámides. Utilizaban fracciones y tenían una forma primitiva de álgebra. Los egipcios también crearon el sistema de números jeroglíficos y emplearon cálculos matemáticos para resolver problemas relacionados con la agricultura, el comercio y la ingeniería.</p>
+
+          <img src="astronomia.jpg" alt="Avances en Astronomía de Egipto" class="civilization-image">
+          <h4>Avances en Astronomía</h4>
+          <p>La astronomía egipcia estaba profundamente relacionada con la religión y la agricultura. Los egipcios observaron los movimientos de las estrellas, el sol y la luna para predecir las estaciones y las inundaciones del Nilo. Establecieron un calendario basado en el ciclo lunar y el ciclo solar, lo que les permitió dividir el año en 12 meses de 30 días cada uno, más 5 días adicionales. También crearon el concepto de horarios del día y la medición del tiempo usando relojes solares.</p>
+        </div>
       </div>
+
+      <!-- Mesopotamia -->
       <div class="civilization">
         <h3>Mesopotamia</h3>
-        <p>La cuna de la escritura y la primera forma de gobierno organizado.</p>
+        <img src="mesopotamia.jpg" alt="Mesopotamia" class="civilization-image">
+        <button class="info-button" onclick="toggleInfo('mesopotamia-info')">Ver Información</button>
+        <div id="mesopotamia-info" class="civilization-info">
+          <h4>Mesopotamia</h4>
+          <p>Mesopotamia, conocida como la cuna de la civilización, se desarrolló entre los ríos Tigris y Éufrates, en lo que hoy es Irak y parte de Siria. Esta región fue el hogar de grandes ciudades-estado como Ur, Uruk y Babilonia, donde los mesopotámicos crearon la primera forma de escritura cuneiforme, que permitió el registro de leyes, comercio y literatura. Además, hicieron importantes avances en matemáticas, astronomía y medicina, sentando las bases de muchas ciencias. Los mesopotámicos eran politeístas, adorando a numerosos dioses y construyendo templos conocidos como zigurats. Su legado perdura a través de su sistema legal, su contribución al conocimiento científico y su influencia en las civilizaciones posteriores.</p>
+        </div>
       </div>
+
+      <!-- China -->
       <div class="civilization">
         <h3>China</h3>
-        <p>Con una historia que abarca miles de años, fue la cuna de grandes avances en ciencia y filosofía.</p>
+        <img src="china.jpg" alt="China" class="civilization-image">
+        <button class="info-button" onclick="toggleInfo('china-info')">Ver Información</button>
+        <div id="china-info" class="civilization-info">
+          <p>China tiene una historia que se remonta a miles de años, siendo una de las civilizaciones más antiguas y perdurables del mundo. A lo largo de su historia, China ha hecho contribuciones significativas en varios campos que han tenido un impacto global.</p>
+
+          <img src="shang.jpg" alt="La dinastía Shang de China" class="civilization-image">
+          <h4>Dinastía Shang (c. 1600 a.C. - 1046 a.C.)</h4>
+          <p>La dinastía Shang (c. 1600 a.C. - 1046 a.C.) fue una de las primeras civilizaciones documentadas de China. Conocida por su escritura jeroglífica, fundición de bronce y su compleja estructura social, la dinastía Shang desempeñó un papel crucial en el desarrollo de la cultura y la religión china. La escritura oracular, realizada en huesos y caparazones de tortuga, permitía a los Shang predecir el futuro y tomar decisiones importantes para el reino.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Atlas Interactivo | Síguenos en: 
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> 
+    <p>© 2025 Atlas Interactivo | Síguenos en:
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </p>
   </footer>
 
-  <script src="app.js"></script>
+  <script>
+    // Function to toggle the visibility of the information
+    function toggleInfo(infoId) {
+      const infoElement = document.getElementById(infoId);
+      infoElement.style.display = (infoElement.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>

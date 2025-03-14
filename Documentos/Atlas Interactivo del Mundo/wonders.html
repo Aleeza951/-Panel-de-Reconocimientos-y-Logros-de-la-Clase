@@ -9,7 +9,6 @@
 <body>
   <header>
     <h1>Maravillas del Mundo</h1>
-    <input type="text" id="search" placeholder="Busca una maravilla..." autofocus list="wonders-list">
     <datalist id="wonders-list"></datalist>
   </header>
 
@@ -34,22 +33,47 @@
   <main>
     <section id="wonders-list">
       <h2>Maravillas Destacadas</h2>
+
       <div class="wonder">
-        <h3>Gran Muralla China</h3>
         <p>Una de las estructuras más imponentes del mundo, símbolo de la historia y cultura china.</p>
+        <img src="gran muralla china.jpeg" alt="Gran Muralla China" class="wonder-img">
+        <button class="more-info-btn">Más información</button>
+        <h3>Gran Muralla China</h3>
+        <div class="more-info" style="display:none;">
+          <p>La Gran Muralla China es una serie de fortificaciones construidas a lo largo de las fronteras norte de China para protegerse de invasiones. Su longitud total es de más de 21,000 km.</p>
+        </div>
       </div>
+
       <div class="wonder">
-        <h3>Petra, Jordania</h3>
         <p>Antigua ciudad excavada en roca, conocida por su arquitectura y sistema de canales.</p>
+        <img src="petra.jpg" alt="Petra, Jordania" class="wonder-img">
+        <button class="more-info-btn">Más información</button>
+        <h3>Petra, Jordania</h3>
+        <div class="more-info" style="display:none;">
+          <p>Petra es una ciudad histórica famosa por sus edificios tallados en roca. Fue la capital de los nabateos y es una de las siete maravillas del mundo moderno.</p>
+        </div>
       </div>
+
       <div class="wonder">
-        <h3>Chichen Itza, México</h3>
         <p>Una de las ciudades más emblemáticas de la civilización maya, famosa por su pirámide.</p>
+        <img src="chichen_itza.jpg" alt="Chichen Itza, México" class="wonder-img">
+        <button class="more-info-btn">Más información</button>
+        <h3>Chichen Itza, México</h3>
+        <div class="more-info" style="display:none;">
+          <p>Chichen Itza es una antigua ciudad maya en la península de Yucatán, conocida por su pirámide de Kukulcán, que es famosa por sus efectos astronómicos durante los equinoccios.</p>
+        </div>
       </div>
+
       <div class="wonder">
-        <h3>Coliseo Romano</h3>
         <p>Un símbolo de la ingeniería romana y del antiguo Imperio Romano.</p>
+        <img src="coliseo_roman.jpg" alt="Coliseo Romano" class="wonder-img">
+        <button class="more-info-btn">Más información</button>
+        <h3>Coliseo Romano</h3>
+        <div class="more-info" style="display:none;">
+          <p>El Coliseo Romano es un anfiteatro en el centro de Roma, utilizado para luchas de gladiadores y otros espectáculos públicos. Es una de las estructuras más emblemáticas del Imperio Romano.</p>
+        </div>
       </div>
+
     </section>
   </main>
 
@@ -61,6 +85,31 @@
     </p>
   </footer>
 
-  <script src="app.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll('.more-info-btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      const wonderDiv = event.target.closest('.wonder');  // Encuentra el contenedor de la maravilla
+      const moreInfo = wonderDiv.querySelector('.more-info');  // Encuentra el contenedor de información
+      const heading = wonderDiv.querySelector('h3');  // Encuentra el encabezado
+
+      // Verifica si la información está visible
+      if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+        moreInfo.style.display = "block";  // Muestra la información
+        heading.style.display = "block";  // Muestra el encabezado (si estaba oculto)
+        event.target.textContent = "Ocultar información";  // Cambia el texto del botón
+      } else {
+        moreInfo.style.display = "none";  // Oculta la información
+        heading.style.display = "none";  // Oculta el encabezado también
+        event.target.textContent = "Más información";  // Cambia el texto del botón
+      }
+    });
+  });
+});
+
+
+  </script>
 </body>
 </html>
