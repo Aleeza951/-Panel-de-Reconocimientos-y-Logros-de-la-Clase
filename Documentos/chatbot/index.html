@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Presentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chatbot-section">
+        <div class="chatbot-image-container">
+            <img src="chatbots.jpg" alt="Chatbot" class="chatbot-image">
+        </div>
+        <div class="chatbot-text">
+            <h1 id="mainHeading" class="main-heading">Chatbot</h1>
+            <p id="subHeading" class="sub-heading">Chatbot by AI</p>
+            <p id="description" class="description">Access to ChatGPT is now open!<br><br>
+              Use the OpenAI neural network for free and without registration. ChatGPT is a chatbot with artificial intelligence. It can generate texts of any complexity and subject matter, compose essays and reports, write a funny story or suggest ideas for new projects.
+          </p>
+          <div class="buttons">
+            <a href="chatbot.html" class="btn">Try Chatbot</a>
+            <a href="chatbot.html" class="btn">Chatbot</a>
+            <!-- Language Button -->
+            <button id="languageBtn" class="btn">🌍 Language</button>
+        </div>
+        <!-- Languages List -->
+        <div id="languagesList" class="hidden">
+          <ul>
+            <li onclick="changeLanguage('en')">English</li>
+            <li onclick="changeLanguage('es')">Español</li>
+            <li onclick="changeLanguage('fr')">Français</li>
+            <li onclick="changeLanguage('ur')">اردو</li>
+            <li onclick="changeLanguage('de')">Deutsch</li>
+            <li onclick="changeLanguage('it')">Italiano</li>
+            <li onclick="changeLanguage('pt')">Português</li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    <div class="chatgpt-info-section">
+      <div class="chatgpt-title">ChatGPT</div>
+      <div class="chatgpt-description">
+        ChatGPT is a chatbot with artificial intelligence from the company OpenAI, co-founded by Elon Musk. 
+        Chatbot communicates with users in natural languages (in English, for instance). You ask questions, 
+        and the bot gives you detailed answers.
+        <br><br>
+        To train the ChatGPT language model, supervised learning and reinforcement learning were used. 
+        As a result, this high-performance model is now capable of giving answers to a wide variety of topics, 
+        with sufficient accuracy and without misleading wordings.
+      </div>
+        <div class="chatgpt-title">What ChatGPT can do</div>
+        <div class="chatgpt-description">
+          ChatGPT is a versatile artificial intelligence tool that can be applied in numerous practical ways. It is capable of answering questions, generating stories, summarizing book plots, assisting in programming tasks, and much more. Whether you need information, creative writing, text translation, or technical support, ChatGPT can adapt to your needs and provide valuable assistance.
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <button id="leftBtn" class="arrow">&larr;</button>
+        <span id="heading" class="heading">What is ChatGPT?</span>
+        <button id="rightBtn" class="arrow">&rarr;</button>
+    </div>
+
+    <!-- Information Sections -->
+    <div class="info-container">
+        <div id="programmingAssistance" class="info">
+            <h3>Programming Assistance</h3>
+            <p>ChatGPT can write code in a specified language (too long code will have to be generated in chunks, otherwise it will not fit in the program screen). With the help of the bot, you can identify bugs, get help on reverse engineering tools, and various programming languages.</p>
+        </div>
+
+        <div id="fictionNetworking" class="info">
+            <h3>Fiction Retelling and Networking</h3>
+            <p>For example, ChatGPT can help you write creative stories, organize ideas, or even assist in building networks around your projects.</p>
+        </div>
+
+        <div id="simpleComplexQuestions" class="info">
+            <h3>Answer to Simple and Complex Questions</h3>
+            <p>For example, what to take for a headache or how to solve a differential equation. Unlike traditional search engines, the bot doesn't redirect you to a website but immediately gives you a specific answer.</p>
+        </div>
+
+        <div id="routineTasks" class="info">
+            <h3>Routine Tasks</h3>
+            <p>Such as drafting letters, generating meta tags, filling out briefs, translating text, etc.</p>
+        </div>
+
+        <div id="neuralNetworkQueries" class="info">
+            <h3>Queries for Neural Networks that Generate Pictures</h3>
+            <p>MidJourney and its analogs require specifically composed detailed and accurate queries. ChatGPT will help compose them.</p>
+        </div>
+    </div>
+
+    <div class="content-box">
+        <div class="heading-container">
+            <span class="heading">How to use ChatGPT?</span>
+        </div>
+        <div class="instructions-container">
+            <!-- Left Instruction: Provide a Prompt -->
+            <div class="instruction-box" style="text-align: left;">
+                <h3>1. Provide a prompt</h3>
+                <p>Give the bot any piece of text for generating a response. It can be a question, a search query, a statement, a declaration, or a task. Any words basically.</p>
+            </div>
+
+            <!-- Right Instruction: Generate a Response -->
+            <div class="instruction-box" style="text-align: left;">
+                <h3>2. Generate a response</h3>
+                <p>After you have entered a prompt, press the send button, and wait a little bit for ChatGPT to generate a response.</p>
+            </div>
+        </div>
+
+        <div class="instructions-container">
+            <!-- Left Instruction: Review the Response -->
+            <div class="instruction-box" style="text-align: left;">
+                <h3>3. Review the response</h3>
+                <p>If you are not completely satisfied with the response (it is incomplete or inaccurate), you can repeat steps 1 and 2 to give the bot more context or to point out its inaccuracies.</p>
+            </div>
+
+            <!-- Right Instruction: Keep Communicating -->
+            <div class="instruction-box" style="text-align: left;">
+                <h3>4. Keep communicating</h3>
+                <p>Keep asking questions about the topic you are interested in, take as much time as you need to clarify details. Or try chatting with ChatGPT about new topics to evaluate all its features.</p>
+            </div>
+        </div>
+
+        <!-- Centered "Try ChatGPT" Button -->
+        <div class="button-container">
+            <button class="try-chatgpt-button" onclick="window.open('https://chat.openai.com', '_blank')">Try ChatGPT</button>
+        </div>
+    </div>
+
+        <div class="content-box">
+            <!-- Heading for "Best ChatGPT Prompts" -->
+            <div class="heading-container">
+                <span class="heading">Best ChatGPT Prompts</span>
+                <!-- Thumbs-up GIF on the right -->
+                <img src="thumbsup3-unscreen.gif" alt="thumbs-up" class="thumbs-up">
+            </div>
+        <!-- Description for using ChatGPT -->
+        <div class="prompts-container">
+            <p>Just ask the bot something you are interested in. Here's a handful of prompts for example:</p>
+
+            <!-- List of prompts -->
+            <ul>
+                <li>Top 10 gift ideas for your cat's birthday</li>
+                <li>Explain the tangent line equation in simple words</li>
+                <li>Come up with fun and creative backyard party ideas</li>
+                <li>Explain to a 6 year old child what a neural network is</li>
+                <li>How to create an HTTP request in Javascript</li>
+                <li>Write a song about [insert subject here]. Add details or plot.</li>
+                <li>Write an article or essay on the topic of [insert topic here]</li>
+                <li>Make up a joke or funny story about [insert topic here]. Add details or plot.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <h1 class="faq-heading">FAQ</h1>
+    
+        <div class="faq-item">
+            <h3 class="faq-question">1. Can I use ChatGPT for free?</h3>
+            <p class="faq-answer">Yes. We provide free unlimited access to ChatGPT without any fees or subscriptions.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3 class="faq-question">2. Do I need to register in ChatGPT?</h3>
+            <p class="faq-answer">No. On our site you can try ChatGPT features without registration.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3 class="faq-question">3. Is ChatGPT available in different languages?</h3>
+            <p class="faq-answer">Currently, ChatGPT is available in 30 different languages, including English, Spanish, French, Russian, Portuguese, Italian, and others. The bot has been trained on a large dataset of texts and can generate responses in each of those languages rather than simply translating from English.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3 class="faq-question">4. How accurate is ChatGPT?</h3>
+            <p class="faq-answer">The accuracy of the chatbot’s responses depends on the quality of input data: how specific were your requests, how much context you provided, etc. ChatGPT can generate human-like responses, but sometimes it gives incorrect or nonsensical answers. It is recommended to use it with caution and apply filtering techniques to ensure quality.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Heading titles
+        const headings = [
+            "Programming Assistance",
+            "Fiction Retelling and Networking",
+            "Answer to a Simple and Complex Question",
+            "Routine Tasks",
+            "Queries for Neural Networks that Generate Pictures"
+        ];
+
+        let currentIndex = 0;
+
+        // Switch between different sections based on heading
+        function updateContent() {
+            // Update the heading text
+            document.getElementById("heading").innerText = headings[currentIndex];
+
+            // Hide all information sections
+            const sections = document.querySelectorAll(".info");
+            sections.forEach(section => section.style.display = "none");
+
+            // Show the relevant section based on the current heading
+            switch (headings[currentIndex]) {
+                case "Programming Assistance":
+                    document.getElementById("programmingAssistance").style.display = "block";
+                    break;
+                case "Fiction Retelling and Networking":
+                    document.getElementById("fictionNetworking").style.display = "block";
+                    break;
+                case "Answer to a Simple and Complex Question":
+                    document.getElementById("simpleComplexQuestions").style.display = "block";
+                    break;
+                case "Routine Tasks":
+                    document.getElementById("routineTasks").style.display = "block";
+                    break;
+                case "Queries for Neural Networks that Generate Pictures":
+                    document.getElementById("neuralNetworkQueries").style.display = "block";
+                    break;
+            }
+        }
+
+        // Left arrow button
+        document.getElementById("leftBtn").addEventListener("click", function () {
+            currentIndex = (currentIndex - 1 + headings.length) % headings.length;
+            updateContent();
+        });
+
+        // Right arrow button
+        document.getElementById("rightBtn").addEventListener("click", function () {
+            currentIndex = (currentIndex + 1) % headings.length;
+            updateContent();
+        });
+        document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", function () {
+            let answer = this.nextElementSibling;
+            this.classList.toggle("active");
+            
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
+    });
+    </script>
+</body>
+</html>

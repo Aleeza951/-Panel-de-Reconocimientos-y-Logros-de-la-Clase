@@ -1,0 +1,390 @@
+/* === General Settings === */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #0d0d0d;
+  color: #00ffcc;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* === Chatbot Section === */
+.chatbot-section {
+  background: linear-gradient(135deg, #001f3f, #004466);
+  color: #00ffcc;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 40px auto;
+  width: 85%;
+  box-shadow: 0 0 30px #00ffcc, 0 0 60px #0099ff;
+  transition: 0.5s ease;
+}
+
+.chatbot-section:hover {
+  box-shadow: 0 0 50px #00ffcc, 0 0 80px #0099ff;
+  transform: scale(1.05);
+}
+
+/* === Headings (Futuristic Glow with Animation) === */
+.main-heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #00ffcc;
+  text-shadow: 0 0 30px #00ffcc, 0 0 60px #0099ff;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+/* === ChatGPT Info Section === */
+.chatgpt-info-section {
+  background: rgba(0, 255, 204, 0.1);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px #00ffcc, 0 0 60px #0099ff;
+  border: 2px solid #00ffcc;
+  width: 80%;
+  margin: 30px auto;
+  text-shadow: 0 0 15px #00ffcc;
+  transition: 0.5s ease;
+}
+
+.chatgpt-info-section:hover {
+  box-shadow: 0px 0px 40px #00ffcc, 0 0 80px #0099ff;
+  transform: scale(1.05);
+}
+
+/* === Buttons with Neon Glow === */
+.try-chatgpt-button {
+  background: black;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  padding: 18px 35px;
+  border-radius: 40px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  top: 26rem;
+}
+
+.try-chatgpt-button:hover {
+  background: #00ffcc;
+  color: black;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #0099ff;
+  transform: scale(1.1);
+}
+
+/* === Info Sections with 3D Effect === */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 90%;
+  margin: 50px auto;
+
+}
+
+.info {
+  background: rgba(0, 255, 204, 0.12);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0px 0px 30px #00ffcc, 0 0 50px #0099ff;
+  border: 2px solid #00ffcc;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.info:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 40px #00ffcc, 0 0 60px #0099ff;
+}
+
+/* === Neon Headings in Info Cards === */
+.info h3 {
+  font-size: 2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 20px #00ffcc, 0 0 40px #0099ff;
+  letter-spacing: 2px;
+}
+
+/* === Neon Glow Animations === */
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 15px #00ffcc, 0 0 30px #0099ff;
+  }
+  100% {
+    text-shadow: 0 0 30px #00ffcc, 0 0 60px #0099ff;
+  }
+}
+
+/* === Holographic Glow Animation for Buttons === */
+@keyframes holoGlow {
+  0% {
+    box-shadow: 0 0 20px #00ffcc, 0 0 30px #0099ff;
+  }
+  100% {
+    box-shadow: 0 0 30px #00ffcc, 0 0 50px #0099ff;
+  }
+}
+
+/* === Holographic Button with Hover Animation === */
+.btn {
+  background: linear-gradient(45deg, #00ffcc, #0099ff);
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #0099ff;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  animation: holoGlow 1.5s infinite alternate;
+}
+
+.btn:hover {
+  background: black;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 35px #00ffcc, 0 0 70px #0099ff;
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+
+.heading-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  top: 15rem;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-right: 20px;
+}
+
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+
+}
+
+.heading:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+.thumbs-up {
+  width: 600px;
+  height: auto;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+  position: relative;
+  top: 10rem;
+}
+
+.thumbs-up:hover {
+  transform: scale(1.1);
+}
+
+.prompts-container {
+  flex: 2;
+  padding: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+  transition: opacity 0.3s ease;
+}
+
+.prompts-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.prompts-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.prompts-container ul li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+  font-size: 1.5rem;
+  top: 0;
+}
+
+.prompts-container ul li:hover {
+  color: #00bcd4;
+}
+
+.prompts-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #bbb;
+}
+
+/* === FAQ Section === */
+.faq-container {
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.faq-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #0099ff;
+}
+
+.faq-item {
+  background: rgba(0, 255, 204, 0.1);
+  margin: 20px 0;
+  padding: 18px;
+  border-radius: 15px;
+  border: 1px solid #00ffcc;
+  box-shadow: 0px 0px 25px #00ffcc;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 30px #00ffcc;
+}
+
+/* === Custom Animation for Hover Effects === */
+@keyframes glowingHover {
+  0% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #0099ff;
+  }
+  100% {
+    text-shadow: 0 0 25px #00ffcc, 0 0 50px #0099ff;
+  }
+}
+
+/* === Instruction Boxes with Hover Effects === */
+.instruction-box {
+  flex: 1;
+  background: rgba(0, 255, 204, 0.1);
+  border: 2px solid #00ffcc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.instruction-box:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 768px) {
+  .chatbot-section {
+    padding: 40px 20px;
+    width: 90%;
+  }
+
+  .info-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .faq-heading {
+    font-size: 2.5rem;
+  }
+}
+/* Container for instructions */
+.instructions-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  background: linear-gradient(45deg, #00bcd4, #3f51b5);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  position: relative;
+  top: 26rem;
+}
+
+/* Individual instruction box */
+.instruction-box {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Hover effect for instruction boxes */
+.instruction-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Title styles for instructions */
+.instruction-box h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #00bcd4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+}
+
+/* Text styles inside each instruction box */
+.instruction-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .instruction-box {
+      width: 100%;
+  }
+}
