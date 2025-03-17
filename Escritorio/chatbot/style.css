@@ -1,0 +1,333 @@
+/* === General Settings === */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #121212;
+  color: #00ffcc;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Chatbot Section (Better Centering & Spacing) === */
+.chatbot-section {
+  background: linear-gradient(135deg, #01082d, #003e66);
+  color: #00ffcc;
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 0 40px #00ffcc, 0 0 80px #0099ff;
+  transition: 0.5s ease;
+  position: relative;
+}
+
+.chatbot-section:hover {
+  box-shadow: 0 0 60px #00ffcc, 0 0 120px #0099ff;
+  transform: scale(1.05);
+}
+
+/* === Headings === */
+.main-heading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #00ffcc;
+  text-shadow: 0 0 25px #00ffcc, 0 0 50px #0099ff;
+  animation: neon-glow 1.5s infinite alternate;
+  margin-bottom: 20px;
+}
+
+/* === ChatGPT Info Section === */
+.chatgpt-info-section {
+  background: rgba(0, 255, 204, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px #00ffcc, 0 0 50px #0099ff;
+  border: 2px solid #00ffcc;
+  width: 85%;
+  max-width: 850px;
+  margin: 30px auto;
+  text-shadow: 0 0 15px #00ffcc;
+  transition: 0.5s ease;
+  position: relative;
+}
+
+.chatgpt-info-section:hover {
+  transform: scale(1.05);
+}
+
+/* === Buttons === */
+.try-chatgpt-button {
+  background: #121212;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  padding: 15px 30px;
+  border-radius: 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #0099ff;
+  margin-top: 20px;
+}
+
+.try-chatgpt-button:hover {
+  background: #00ffcc;
+  color: black;
+  box-shadow: 0 0 50px #00ffcc, 0 0 80px #0099ff;
+}
+
+/* === Info Sections (More Balanced Grid) === */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+
+}
+
+.info {
+  background: rgba(0, 255, 204, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0px 0px 30px #00ffcc, 0 0 50px #0099ff;
+  border: 2px solid #00ffcc;
+  transition: all 0.4s ease-in-out;
+}
+
+.info:hover {
+  transform: scale(1.05);
+}
+
+/* === FAQ Section === */
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.faq-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #0099ff;
+}
+
+.faq-item {
+  background: rgba(0, 255, 204, 0.1);
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #00ffcc;
+  box-shadow: 0px 0px 20px #00ffcc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.05);
+}
+
+/* === Responsive Design (Better for Small Screens) === */
+@media screen and (max-width: 768px) {
+  .chatbot-section, .chatgpt-info-section {
+    padding: 35px 15px;
+    width: 95%;
+  }
+
+  .info-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .main-heading {
+    font-size: 2.8rem;
+  }
+
+  .faq-heading {
+    font-size: 2rem;
+  }
+}
+
+/* === Content Box (Glowing Cyberpunk Look) === */
+.content-box {
+  background: linear-gradient(135deg, #01082d, #003e66);
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #0099ff;
+  transition: 0.4s ease;
+  margin: 50px 0;
+}
+
+.content-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px #00ffcc, 0 0 80px #0099ff;
+}
+
+/* === Heading Styling === */
+.heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #0099ff;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+.thumbs-up {
+  width: 50px;
+  filter: drop-shadow(0 0 15px #00ffcc);
+}
+
+/* === Prompt List === */
+.prompts-container p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.prompts-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prompts-container li {
+  background: rgba(0, 255, 204, 0.1);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00ffcc;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.prompts-container li:hover {
+  transform: scale(1.05);
+  background: rgba(0, 255, 204, 0.2);
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 768px) {
+  .content-box {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .heading-container {
+    font-size: 1.5rem;
+  }
+
+  .thumbs-up {
+    width: 40px;
+  }
+}
+/* === Button Container === */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* === Cyberpunk Neon Buttons === */
+.btn {
+  background: linear-gradient(45deg, #00ffcc, #0099ff);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 15px #00ffcc, 0 0 30px #0099ff;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  animation: holoGlow 1.5s infinite alternate;
+  cursor: pointer;
+}
+
+/* === Hover Effect === */
+.btn:hover {
+  background: black;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 35px #00ffcc, 0 0 70px #0099ff;
+  transform: scale(1.1);
+}
+
+/* === Click Effect === */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* === Language Button === */
+#languageBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+/* === Language List Styling === */
+#languagesList {
+  background: rgba(0, 255, 204, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffcc;
+  display: none;
+  position: absolute;
+  top: 50px;
+}
+
+#languagesList ul {
+  list-style: none;
+  padding: 0;
+}
+
+#languagesList li {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+#languagesList li:hover {
+  background: rgba(0, 255, 204, 0.3);
+  transform: scale(1.1);
+}
+
+/* === Glow Animation === */
+@keyframes holoGlow {
+  0% {
+    box-shadow: 0 0 20px #00ffcc;
+  }
+  100% {
+    box-shadow: 0 0 40px #0099ff;
+  }
+}
+.hidden {
+  display: none;
+}
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
