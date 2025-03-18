@@ -1,40 +1,219 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
     margin: 0;
+    color: #fff;
+    width: 100%;
 }
 
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 70%; /* Ajusta el ancho general de la página */
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0, 255, 255, 0.2), 0 10px 30px rgba(0, 204, 255, 0.2);
+}
+
+/* Login Form Section */
 .login-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: black;
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    width: 45%; /* Ajusta el ancho del formulario */
     text-align: center;
 }
 
-.login-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Header */
+h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #00ff99, #00ccff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(0, 255, 153, 0.8), 0 0 30px rgba(0, 204, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5);
 }
 
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background: #3498db;
-    color: white;
+/* Input Groups */
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #ccc;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    background-color: #1a1a1a;
+    padding: 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 80%;
+    padding: 16px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 18px;
+    outline: none;
+    background-color: #2e2e2e;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.input-group input:focus {
+    border-color: #00ff99;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.8);
+}
+
+/* Button */
+button {
+    width: 80%;
+    padding: 18px;
+    background-color: #00ff99;
+    color: #121212;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.login-container button:hover {
-    background: #2980b9;
+button:hover {
+    background-color: #00ccff;
+    box-shadow: 0 0 25px rgba(0, 255, 153, 1), 0 0 50px rgba(0, 204, 255, 1);
+}
+
+/* Text and Link */
+p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+a {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 153, 0.8);
+}
+
+a:hover {
+    color: #00ccff;
+    text-decoration: underline;
+    text-shadow: 0 0 20px rgba(0, 204, 255, 1);
+}
+
+/* Animation */
+input, button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+input:nth-child(1), button {
+    animation-delay: 0.3s;
+}
+
+input:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chatbot Image */
+.chatbot-container {
+    width: 55%; /* Ajusta el tamaño del contenedor de la imagen */
+    height: 100%;
+    background: url('chatbot-image.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Chatbot Image Section */
+.image-container {
+    width: 90%; /* Ancho de la imagen más flexible */
+    height: 100%;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.chatbot-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2), 0 10px 40px rgba(0, 204, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatbot-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 45px rgba(0, 255, 255, 0.4), 0 15px 60px rgba(0, 204, 255, 0.4);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        width: 90%; /* Hace el contenedor más estrecho en pantallas más pequeñas */
+    }
+
+    .login-container {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .chatbot-container {
+        width: 80%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        width: 100%;
+        padding: 30px 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    input, button {
+        font-size: 16px;
+        padding: 14px;
+    }
 }

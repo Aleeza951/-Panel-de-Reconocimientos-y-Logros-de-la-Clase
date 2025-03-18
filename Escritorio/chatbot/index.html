@@ -18,11 +18,10 @@
               Use the OpenAI neural network for free and without registration. ChatGPT is a chatbot with artificial intelligence. It can generate texts of any complexity and subject matter, compose essays and reports, write a funny story or suggest ideas for new projects.
           </p>
           <div class="buttons">
+            <a href="login.html" class="btn">View Demo</a>
             <a href="chatbot.html" class="btn">Try Chatbot</a>
-            <a href="chatbot.html" class="btn">Chatbot</a>
        <!-- Botón de idioma -->
-<button id="languageBtn" class="btn">🌍 Language</button>
-
+       <button id="languageIcon">🌍</button>
 <!-- Lista de idiomas -->
 <div id="languagesList" class="hidden">
   <ul>
@@ -239,60 +238,60 @@
             }
         });
     });
-     // Mostrar/ocultar la lista de idiomas
-  document.getElementById("languageBtn").addEventListener("click", function () {
-      let languagesList = document.getElementById("languagesList");
-      languagesList.classList.toggle("hidden");
-  });
+      // Toggle languages list when clicking the globe icon
+      document.getElementById("languageIcon").addEventListener("click", function () {
+            let languagesList = document.getElementById("languagesList");
+            languagesList.style.display = languagesList.style.display === "block" ? "none" : "block";
+        });
 
-  // Cambiar idioma del contenido
-  function changeLanguage(lang) {
-      let translations = {
-          en: {
-              mainHeading: "Chatbot",
-              subHeading: "Chatbot by AI",
-              description: "Access to ChatGPT is now open! Use the OpenAI neural network for free and without registration."
-          },
-          es: {
-              mainHeading: "Chatbot",
-              subHeading: "Chatbot por IA",
-              description: "¡El acceso a ChatGPT ya está abierto! Usa la red neuronal de OpenAI gratis y sin registro."
-          },
-          fr: {
-              mainHeading: "Chatbot",
-              subHeading: "Chatbot par IA",
-              description: "L'accès à ChatGPT est maintenant ouvert ! Utilisez le réseau neuronal OpenAI gratuitement et sans inscription."
-          },
-          ur: {
-              mainHeading: "چیٹ بوٹ",
-              subHeading: "اے آئی کے ذریعہ چیٹ بوٹ",
-              description: "چیٹ جی پی ٹی تک رسائی اب کھلی ہے! اوپن اے آئی نیورل نیٹ ورک کو مفت اور بغیر رجسٹریشن کے استعمال کریں۔"
-          },
-          de: {
-              mainHeading: "Chatbot",
-              subHeading: "Chatbot durch KI",
-              description: "Der Zugriff auf ChatGPT ist jetzt geöffnet! Nutzen Sie das OpenAI neuronale Netzwerk kostenlos und ohne Registrierung."
-          },
-          it: {
-              mainHeading: "Chatbot",
-              subHeading: "Chatbot di IA",
-              description: "L'accesso a ChatGPT è ora aperto! Usa la rete neurale di OpenAI gratuitamente e senza registrazione."
-          },
-          pt: {
-              mainHeading: "Chatbot",
-              subHeading: "Chatbot por IA",
-              description: "O acesso ao ChatGPT agora está aberto! Use a rede neural da OpenAI gratuitamente e sem registro."
-          }
-      };
+        // Change language of content
+        function changeLanguage(lang) {
+            let translations = {
+                en: {
+                    mainHeading: "Chatbot",
+                    subHeading: "Chatbot by AI",
+                    description: "Access to ChatGPT is now open! Use the OpenAI neural network for free and without registration."
+                },
+                es: {
+                    mainHeading: "Chatbot",
+                    subHeading: "Chatbot por IA",
+                    description: "¡El acceso a ChatGPT ya está abierto! Usa la red neuronal de OpenAI gratis y sin registro."
+                },
+                fr: {
+                    mainHeading: "Chatbot",
+                    subHeading: "Chatbot par IA",
+                    description: "L'accès à ChatGPT est maintenant ouvert ! Utilisez le réseau neuronal OpenAI gratuitement et sans inscription."
+                },
+                ur: {
+                    mainHeading: "چیٹ بوٹ",
+                    subHeading: "اے آئی کے ذریعہ چیٹ بوٹ",
+                    description: "چیٹ جی پی ٹی تک رسائی اب کھلی ہے! اوپن اے آئی نیورل نیٹ ورک کو مفت اور بغیر رجسٹریشن کے استعمال کریں۔"
+                },
+                de: {
+                    mainHeading: "Chatbot",
+                    subHeading: "Chatbot durch KI",
+                    description: "Der Zugriff auf ChatGPT ist jetzt geöffnet! Nutzen Sie das OpenAI neuronale Netzwerk kostenlos und ohne Registrierung."
+                },
+                it: {
+                    mainHeading: "Chatbot",
+                    subHeading: "Chatbot di IA",
+                    description: "L'accesso a ChatGPT è ora aperto! Usa la rete neurale di OpenAI gratuitamente e senza registrazione."
+                },
+                pt: {
+                    mainHeading: "Chatbot",
+                    subHeading: "Chatbot por IA",
+                    description: "O acesso ao ChatGPT agora está aberto! Use a rede neural da OpenAI gratuitamente e sem registro."
+                }
+            };
 
-      // Aplicar traducción
-      document.getElementById("mainHeading").innerText = translations[lang].mainHeading;
-      document.getElementById("subHeading").innerText = translations[lang].subHeading;
-      document.getElementById("description").innerText = translations[lang].description;
+            // Apply translations to content
+            document.getElementById("mainHeading").innerText = translations[lang].mainHeading;
+            document.getElementById("subHeading").innerText = translations[lang].subHeading;
+            document.getElementById("description").innerText = translations[lang].description;
 
-      // Ocultar lista después de seleccionar un idioma
-      document.getElementById("languagesList").classList.add("hidden");
-  }
+            // Close languages list after selection
+            document.getElementById("languagesList").style.display = "none";
+        }
     </script>
 </body>
 </html>
