@@ -1,0 +1,131 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fondo oscuro con un gradiente metálico */
+  body {
+    background: linear-gradient(45deg, #1a1a1a, #343434);
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Estilo de contenedor principal */
+  .container {
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  /* Título con efecto de neón */
+  h1 {
+    font-size: 3rem;
+    color: #00ffcc;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: neonGlow 1.5s infinite alternate;
+  }
+  
+  /* Animación de resplandor de neón */
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+    100% {
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    }
+  }
+  
+  /* Botones futuristas */
+  button {
+    background: #333;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #00ffcc;
+    color: #333;
+    transform: translateY(-2px);
+  }
+  
+  /* Efecto de hover con movimiento para los botones */
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Estilo de texto */
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #cfcfcf;
+  }
+  
+  /* Div con animación futurista */
+  .ai-box {
+    background: rgba(0, 255, 255, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    animation: moveIn 2s ease-out;
+  }
+  
+  /* Animación de entrada futurista */
+  @keyframes moveIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efectos de texto para la caja de AI */
+  .ai-box h2 {
+    font-size: 2rem;
+    color: #00ffcc;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Diseño de tarjeta con sombra metálica */
+  .card {
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+  }
+  
+  .card h3 {
+    color: #00ffcc;
+    font-size: 1.8rem;
+  }
+  
+  .card p {
+    color: #d1d1d1;
+    font-size: 1rem;
+  }
+  

@@ -14,24 +14,24 @@ body {
 /* Main Container */
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Aligns the form and image side by side */
     align-items: center;
     height: 80vh;
-    width: 70%; /* Ajusta el ancho general de la página */
+    width: 100%;
     margin: 0 auto;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 15px 50px rgba(0, 255, 255, 0.2), 0 10px 30px rgba(0, 204, 255, 0.2);
 }
 
 /* Login Form Section */
 .login-container {
-    background-color: black;
     padding: 40px 60px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
-    width: 45%; /* Ajusta el ancho del formulario */
+    width: 50rem; /* Form width */
     text-align: center;
+    background-size: cover;
+    position: relative;
+    right: 10rem;
 }
 
 /* Header */
@@ -56,17 +56,17 @@ h2 {
     font-size: 16px;
     color: #ccc;
     position: absolute;
-    top: -12px;
-    left: 12px;
     background-color: #1a1a1a;
-    padding: 0 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
+    position: relative;
+    top: 19em;
+    right: 22rem;
 }
 
 .input-group input {
-    width: 80%;
+    width: 50rem;
     padding: 16px;
     border: 2px solid #333;
     border-radius: 8px;
@@ -76,6 +76,9 @@ h2 {
     color: #fff;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    position: relative;
+    top: 20rem;
+ 
 }
 
 .input-group input:focus {
@@ -97,6 +100,8 @@ button {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    position: relative;
+    top: 20rem;
 }
 
 button:hover {
@@ -109,6 +114,8 @@ p {
     font-size: 14px;
     color: #ccc;
     margin-top: 20px;
+    position: relative;
+    top: 20rem;
 }
 
 a {
@@ -116,6 +123,7 @@ a {
     text-decoration: none;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 255, 153, 0.8);
+    position: relative;
 }
 
 a:hover {
@@ -148,7 +156,7 @@ input:nth-child(2) {
 
 /* Chatbot Image */
 .chatbot-container {
-    width: 55%; /* Ajusta el tamaño del contenedor de la imagen */
+    width: 50%; /* Adjusted the width */
     height: 100%;
     background: url('chatbot-image.png') no-repeat center center;
     background-size: cover;
@@ -156,18 +164,21 @@ input:nth-child(2) {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    border-left: 2px solid #00ff99; /* Robotic border style */
 }
 
 /* Chatbot Image Section */
 .image-container {
-    width: 90%; /* Ancho de la imagen más flexible */
+    width: 90%; /* Flexible image width */
     height: 100%;
-    background-color: #2e2e2e;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     overflow: hidden;
+    position: relative;
+    left: 50rem;
+    bottom:20rem;
 }
 
 .chatbot-image {
@@ -188,7 +199,7 @@ input:nth-child(2) {
 @media screen and (max-width: 1024px) {
     .container {
         flex-direction: column;
-        width: 90%; /* Hace el contenedor más estrecho en pantallas más pequeñas */
+        width: 90%;
     }
 
     .login-container {

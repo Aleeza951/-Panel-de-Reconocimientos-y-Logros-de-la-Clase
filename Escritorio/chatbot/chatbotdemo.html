@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Demo</title>
+    <link rel="stylesheet" href="chatbotdemo.css">
+</head>
+<body>
+
+    <!-- Chatbot Section -->
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <h2>AI Chatbot</h2>
+        </div>
+
+        <div class="chat-box">
+            <div class="chat-message user">
+                <p>Hello, how can I help you today?</p>
+            </div>
+            <div class="chat-message bot">
+                <p>Hi! I'm your friendly chatbot. How can I assist you?</p>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type a message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Button to view demo -->
+    <div class="btn-container">
+        <a href="demo.html" class="btn">👆 Click</a>
+    </div>
+
+    <script>
+        function sendMessage() {
+    const userInput = document.getElementById("userInput").value;
+    if (userInput.trim() === "") return;
+
+    const chatBox = document.querySelector(".chat-box");
+
+    // Display user's message
+    const userMessage = document.createElement("div");
+    userMessage.classList.add("chat-message", "user");
+    userMessage.textContent = userInput;
+    chatBox.appendChild(userMessage);
+
+    // Display bot's response
+    const botMessage = document.createElement("div");
+    botMessage.classList.add("chat-message", "bot");
+    botMessage.textContent = "I'm here to help you!";
+    chatBox.appendChild(botMessage);
+
+    // Clear the input field
+    document.getElementById("userInput").value = "";
+
+    // Scroll to the bottom
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+    </script>
+</body>
+</html>

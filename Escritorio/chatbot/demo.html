@@ -3,49 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Chatbot</title>
+    <title>AI Chatbot Demo</title>
     <link rel="stylesheet" href="demo.css">
 </head>
 <body>
-    <div class="chatbot-container">
-        <div class="chatbot-header">
-            <h1>Welcome to Chatbot Demo</h1>
+    <div class="chatbot-section">
+        <div class="chatbot-image-container">
+            <img src="robotic demo.avif" alt="Chatbot" class="chatbot-image">
         </div>
+        <div class="chatbot-text">
+            <h1 class="main-heading">AI Chatbot</h1>
+            <p class="sub-heading">Chatbot by AI</p>
+            <p class="description">
+                Access to ChatGPT is now open!<br><br>
+                Use the OpenAI neural network for free and without registration. ChatGPT is a chatbot with artificial intelligence. It can generate texts of any complexity and subject matter, compose essays, and reports, write a funny story or suggest ideas for new projects.
+            </p>
+            <div class="buttons">
+                <a href="login.html" class="btn">View Demo</a>
+                <a href="trychatbot.html" class="btn">Try Chatbot</a>
+                <a href="index.html" class="btn">Home</a>
 
-        <div class="chatbox">
-            <div class="messages">
-                <!-- Messages will appear here -->
-            </div>
-
-            <div class="input-area">
-                <input type="text" id="userInput" placeholder="Type your message...">
-                <button onclick="sendMessage()">Send</button>
             </div>
         </div>
     </div>
-
-    <script>
-        // Function to send a message
-        function sendMessage() {
-            const userInput = document.getElementById("userInput").value;
-            const messageContainer = document.querySelector(".messages");
-            
-            if (userInput.trim() !== "") {
-                const userMessage = document.createElement("div");
-                userMessage.classList.add("user-message");
-                userMessage.textContent = userInput;
-                messageContainer.appendChild(userMessage);
-                document.getElementById("userInput").value = "";
-
-                // Chatbot response (example)
-                setTimeout(() => {
-                    const botMessage = document.createElement("div");
-                    botMessage.classList.add("bot-message");
-                    botMessage.textContent = "This is a chatbot response!";
-                    messageContainer.appendChild(botMessage);
-                }, 1000);
-            }
-        }
-    </script>
 </body>
 </html>
