@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0rem;
+    background-color: #f9f9f9;
+    background-image: url('BOOK.webp');  /* Image ko background me set karna */
+    background-size: cover;                     /* Image ko container ke size ke mutabiq stretch karna */
+    background-position: center;                /* Image ko center me position karna */
+    background-repeat: no-repeat;               /* Image ko repeat na hone dena */
+    height: 10vh;                              /* Body ki height full screen ke barabar */
+    filter: brightness(70%) contrast(110%);     /* Image ko thoda dark aur zyada vibrant karna */
+    color: white;                               /* Text ka color white hona chahiye */
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Full screen height */
+    text-align: center;
+    position: relative; /* So that logo can be positioned in the left corner */
+}
+
+/* Logo Style */
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.logo img {
+    width: 60px; /* Adjust the size of your logo */
+    height: auto;
+}
+
+/* Animated Heading */
+.animated-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6347;
+    animation: slideIn 3s ease-out infinite;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+/* Navigation Menu Styles */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: rgb(66, 65, 65);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu > li a:hover {
+    color: #ff6347;
+    background-color: rgba(255, 99, 71, 0.2);
+    color: #ff6347;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown li {
+    margin: 5px 0;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 8px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Show Dropdown on Hover */
+.nav-menu > li:hover .dropdown {
+    display: block;
+}
+
+
+/* Keyframe Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Hero Section Styles */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));  /* Gradient overlay */
+    background-size: cover;
+    background-position: center;
+    height: 50vh;                        /* Increased height for impact */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);  /* Slanted edge for unique shape */
+}
+
+.hero-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);      /* Darker transparent background for text */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);  /* Deep shadow for elevated effect */
+    animation: fadeIn 2s ease-in-out;    /* Smooth fade-in animation */
+    backdrop-filter: blur(5px);          /* Blurred background for a glass effect */
+}
+
+.hero h2 {
+    font-size: 3.5rem;                   /* Bigger and more striking heading */
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);  /* Enhanced text shadow */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.hero .btn {
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #ff6347, #ff4500, #ff7f50);  /* Multi-color gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.6);  /* Bright shadow for glowing effect */
+}
+
+.hero .btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);              /* Bigger zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.8);  /* Intense glow on hover */
+}
+
+/* Smooth fade-in keyframe animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);    /* Slightly deeper initial animation */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
