@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-heading">Book Details</h1>
+    </header>
+
+    <section id="book-details">
+        <div class="book-info">
+            <div class="book-image">
+                <img id="book-image" src="" alt="Book Cover">
+            </div>
+            <div class="book-description">
+                <h2 id="book-title"></h2>
+                <p id="book-description-text"></p>
+                <p class="author" id="book-author"></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Load book details from localStorage
+        const bookDetails = JSON.parse(localStorage.getItem("bookDetails"));
+        
+        // Display the details
+        document.getElementById("book-title").textContent = bookDetails.title;
+        document.getElementById("book-description-text").textContent = bookDetails.description;
+        document.getElementById("book-author").textContent = "By: " + bookDetails.author;
+        document.getElementById("book-image").src = bookDetails.image;
+    </script>
+</body>
+</html>

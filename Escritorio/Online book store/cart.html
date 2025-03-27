@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <header>
+        <h1>Your Cart</h1>
+        <a href="index.html" class="back-to-home">Back to Home</a>
+    </header>
+
+    <section id="cart-display" class="cart-page">
+        <!-- Cart items will be displayed here dynamically -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Bookstore</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Display books in cart when page loads
+    displayCart();
+});
+
+// Function to display books in the cart
+function displayCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartDisplay = document.getElementById("cart-display");
+
+    if (cart.length > 0) {
+        cart.forEach(book => {
+            const bookCard = document.createElement("div");
+            bookCard.classList.add("book-card");
+
+            bookCard.innerHTML = `
+                <img src="${book.image}" alt="Book Cover">
+                <div>
+                    <h3>${book.title}</h3>
+                    <p>Author: ${book.author}</p>
+                    <p>Publisher: ${book.publisher}</p>
+                    <a href="#" class="remove-btn" onclick="removeFromCart('${book.id}')">Remove</a>
+                </div>
+            `;
+
+            cartDisplay.appendChild(bookCard);
+        });
+    } else {
+        cartDisplay.innerHTML = "<p>Your cart is empty.</p>";
+    }
+}
+
+// Function to remove a book from the cart
+function removeFromCart(bookId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter(item => item.id !== bookId); // Remove book from cart
+
+    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
+    displayCart(); // Re-render the cart
+}
+
+    </script>
+</body>
+</html>

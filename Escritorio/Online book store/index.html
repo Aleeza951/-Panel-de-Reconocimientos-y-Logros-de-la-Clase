@@ -8,53 +8,25 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo book store.png" alt="Bookstore Logo" />
-        </div>
-        <h1 class="animated-heading">Welcome to the Online Bookstore</h1>
+            <div class="logo">
+                <img src="logo book store.png" alt="Bookstore Logo" />
+            </div>
+            <h1 class="animated-heading">Welcome to the Online Bookstore</h1>
+        
+            <!-- Navigation Menu with Dropdown -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" id="home-btn">Home</a></li>
+                    <!-- Dropdown for Books -->
+                    <li><a href="books.html" id="books-btn">Books</a>
+                    <li><a href="categories.html" id="categories-btn">Categories</a></li>
+                    <li><a href="cart.html" id="cart-btn">Cart</a></li>
+                    <li><a href="login.html" id="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <!-- Navigation Menu with Dropdown -->
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="#">Home</a></li>
 
-                <!-- Dropdown for Books -->
-                <li>
-                    <a href="#">Books</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Fiction</a></li>
-                        <li><a href="#">Non-fiction</a></li>
-                        <li><a href="#">Mystery & Thriller</a></li>
-                        <li><a href="#">Science Fiction</a></li>
-                        <li><a href="#">Comics & Graphic Novels</a></li>
-                    </ul>
-                </li>
-
-                <!-- Dropdown for Categories -->
-                <li>
-                    <a href="#">Categories</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Best Sellers</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Award Winners</a></li>
-                        <li><a href="#">Children's Books</a></li>
-                        <li><a href="#">Young Adult</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Find Your Next Great Read</h2>
-            <p>Explore a wide selection of books in every genre!</p>
-            <a href="#" class="btn">Shop Now</a>
-        </div>
-    </section>
+    <script src="script.js"></script>
 </body>
 </html>
