@@ -1,47 +1,55 @@
-/* Definir variables CSS */
+/* === ROOT VARIABLES === */
 :root {
-    --primary-color: #333;
-    --secondary-color: #555;
-    --background-color: #f4f4f4;
-    --text-color: white;
-    --button-color: #333;
-    --button-hover-color: #555;
-    --button-focus-color: #777;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --max-width: 1200px;
+    --primary-color: #0f0f0f;
+    --neon-blue: #00eaff;
+    --neon-pink: #ff4dff;
+    --neon-green: #39ff14;
+    --teal: #008080; /* Teal color */
+    --background-color: #ffffff;
+    --text-color: #000000; /* black text on white */
+
+
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    --neon-glow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
     --hover-scale: 1.05;
     --transition-time: 0.3s;
 }
 
-/* Body Styles */
+/* === GLOBAL STYLES === */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Header Styles */
+/* === HEADER WITH LOGO === */
 header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--background-color);
     padding: 20px;
     text-align: center;
     box-shadow: var(--box-shadow);
 }
 
 header .logo img {
-    max-width: 150px;
+    width: 100px;  /* Adjusted size */
+    height: auto;
     margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--teal);  /* Teal border */
+    box-shadow: var(--neon-glow);
 }
 
 header .animated-heading {
-    font-size: 2em;
+    font-size: 2.5em;
+    color: var(--neon-blue);
+    text-shadow: var(--neon-glow);
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Navegación */
+/* === NAVIGATION STYLES WITH NEON LINKS === */
 nav ul.nav-menu {
     list-style: none;
     padding: 0;
@@ -54,65 +62,62 @@ nav ul.nav-menu li {
 }
 
 nav ul.nav-menu li a {
-    color: var(--text-color);
-    text-decoration: none;
+    color: var(--teal);  /* Teal color for links */
     font-size: 1.1em;
-    padding: 10px;
-    transition: background-color var(--transition-time), transform var(--transition-time);
+    text-decoration: none;
+    transition: color var(--transition-time), transform var(--transition-time);
 }
 
 nav ul.nav-menu li a:hover,
 nav ul.nav-menu li a:focus {
-    background-color: var(--secondary-color);
+    color: var(--neon-green);
+    text-shadow: var(--neon-glow);
     transform: scale(1.1);
 }
 
-/* Book Section Styles */
-#books-section {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
+/* === BOOK CARD STYLES WITH BETTER IMAGE ADJUSTMENT === */
 .books-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);  /* Balanced grid for 4 cards in a row */
+    gap: 30px;
     justify-items: center;
     width: 100%;
-    max-width: var(--max-width);
+    max-width: 1200px;  /* Center and limit width */
     margin: 0 auto;
 }
 
 .book-card {
-    background-color: white;
+    background-color: var(--primary-color);
+    border: 2px solid var(--teal);  /* Teal border for book cards */
+    border-radius: 8px;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--neon-glow);
+    transition: border-color var(--transition-time), transform var(--transition-time);
     width: 100%;
-    max-width: 200px;
-    transition: transform var(--transition-time), box-shadow var(--transition-time);
+    max-width: 220px;
 }
 
 .book-card:hover,
 .book-card:focus {
     transform: scale(var(--hover-scale));
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--neon-green);
 }
 
 .book-card img {
     width: 100%;
     height: auto;
-    max-height: 350px;
+    max-height: 280px;  /* Limit image height */
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: var(--neon-glow);  /* Subtle glow around images */
 }
 
 .book-card h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 15px 0;
+    color: var(--teal);  /* Teal color for headings */
 }
 
 .book-card p {
@@ -121,88 +126,51 @@ nav ul.nav-menu li a:focus {
 }
 
 .book-card button {
-    background-color: var(--button-color);
-    color: var(--text-color);
+    background-color: var(--neon-blue);
+    color: var(--primary-color);
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color var(--transition-time), transform var(--transition-time);
+    box-shadow: var(--neon-glow);
+    transition: background-color var(--transition-time), box-shadow var(--transition-time), transform var(--transition-time);
 }
 
 .book-card button:hover,
 .book-card button:focus {
-    background-color: var(--button-hover-color);
+    background-color: var(--neon-green);
+    box-shadow: 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
     transform: scale(1.1);
 }
 
-/* Info Page Styling */
-#book-details {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-}
-
-.book-info {
-    width: 70%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-}
-
-.book-info img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.book-info h2 {
-    font-size: 2em;
-    margin: 20px 0;
-}
-
-.book-info p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.book-info .author {
-    font-style: italic;
-    color: #777;
-}
-
-/* Animación de desvanecimiento */
+/* === ANIMATION === */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-/* Medias Queries para Responsividad */
+/* === MEDIA QUERIES FOR RESPONSIVE IMAGES AND LOGO === */
 @media (max-width: 768px) {
     .books-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 libros por fila */
+        grid-template-columns: repeat(2, 1fr);  /* 2 cards per row on smaller screens */
     }
 
-    .book-card {
-        max-width: 150px;
+    header .logo img {
+        width: 80px;  /* Smaller logo size for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
+    .book-card img {
+        max-height: 200px;  /* Smaller image height on mobile */
+    }
+
     header .animated-heading {
         font-size: 1.5em;
     }
 
-    .book-info {
-        width: 90%;
-    }
-
-    .books-container {
-        grid-template-columns: 1fr; /* 1 libro por fila */
+    .book-card {
+        max-width: 150px;
     }
 }

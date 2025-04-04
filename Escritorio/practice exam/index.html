@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuccessHub Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #008080;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .form-container, .about-section, .successhub-section, .contact-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 30%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+       .message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+}
+
+        button {
+            background-color: #0d4747;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #006666; }
+        .message { color: green; font-weight: bold; }
+
+        /* Sliding Register Form */
+        #register-form {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 300px;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            transition: right 0.3s ease;
+            padding: 20px;
+        }
+        #register-form.open { right: 0; }
+        .close-btn {
+            font-size: 20px;
+            color: red;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+          }
+        #register-form-inner input[type="text"], 
+       #register-form-inner input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+        #register-form-inner button {
+            background-color: #0d4747;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+         #register-form-inner button:hover {
+             background-color: #006666;
+         }
+        .form-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .contact-info {
+            width: 48%;
+            background-color: #e0f7f7;
+        }
+        footer{
+            text-align: center;
+            padding: 20px;
+            background-color: #006666; 
+            color: white; 
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to SuccessHub</h1>
+    <p>Your path to success begins here!</p>
+    <button id="open-form-btn">Register Now</button>
+</header>
+
+<div class="container">
+    <div class="about-section">
+        <h2>About SuccessHub</h2>
+       <p>Welcome to SuccessHub! This page is designed to help you take your first step towards achieving personal or professional success. Whether you're looking to enhance your skills, learn new strategies, or join a community of like-minded individuals, you're in the right place. By registering below, you gain access to a wealth of resources that will guide you on your journey to success!</p>
+    </div>
+
+    <div class="successhub-section">
+        <h2>Why Choose SuccessHub?</h2>
+        <p>At SuccessHub, we believe that success is achievable for everyone. Our platform offers:</p>
+        <ul>
+            <li>Expert guidance from industry professionals</li>
+            <li>Exclusive resources and tools</li>
+            <li>A community of passionate learners</li>
+            <li>Personalized recommendations based on your goals</li>
+            <li>Ongoing support to help you stay on track</li>
+        </ul>
+        <p>Join thousands of others who have already transformed their lives with SuccessHub. Start your journey today by filling out the form above!</p>
+    </div>
+
+    <div class="form-container">
+        <h2>Contact Form</h2>
+        <form id="contact-form">
+            <label for="contact-name">Name:</label>
+            <input type="text" id="contact-name" required>
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="message" id="contact-message"></div>
+    </div>
+
+    <div id="register-form">
+        <span class="close-btn" onclick="closeRegisterForm()">×</span>
+        <h2>Register Here</h2>
+        <form id="register-form-inner">
+            <label for="reg-name">Name:</label>
+            <input type="text" id="reg-name" required>
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="message" id="register-message"></div>
+    </div>
+
+    <div class="form-wrapper">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> your-email@example.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 SuccessHub. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function showMessage(id, text) {
+        document.getElementById(id).innerText = text;
+    }
+
+    function validateForm(event, formId, messageId, successText) {
+        event.preventDefault();
+        const inputs = document.querySelectorAll(`#${formId} input`);
+        for (let input of inputs) {
+            if (!input.value) return alert("Please fill all fields.");
+        }
+        showMessage(messageId, successText);
+        document.getElementById(formId).reset();
+    }
+
+    function openRegisterForm() {
+        document.getElementById('register-form').classList.add('open');
+    }
+    function closeRegisterForm() {
+        document.getElementById('register-form').classList.remove('open');
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        validateForm(event, 'contact-form', 'contact-message', 'Thank you for contacting us. We will contact you soon');
+    });
+
+    document.getElementById('register-form-inner').addEventListener('submit', function(event) {
+        validateForm(event, 'register-form-inner', 'register-message', 'Thank you for registering. You are regisrered successfully');
+    });
+
+    document.getElementById('open-form-btn').addEventListener('click', openRegisterForm);
+</script>
+
+</body>
+</html>

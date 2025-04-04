@@ -52,127 +52,122 @@
     <script>
         // Fiction Books Array
         const fictionBooks = [
-            { title: "A Little Life", author: "Hanya Yanagihara", description: "A deeply moving story of friendship, trauma, and survival.", image: "A Little Life.jpeg", category: "fiction" },
-            { title: "Anna Karenina", author: "Leo Tolstoy", description: "A tragic love story set in Russian high society.", image: "Anna Karenina.jpeg", category: "classics" },
-            { title: "Beloved", author: "Toni Morrison", description: "A powerful story about slavery and motherhood.", image: "Beloved.png", category: "fiction" },
-            { title: "Catch-22", author: "Joseph Heller", description: "A satirical novel about the absurdity of war.", image: "Catch-22.jpeg", category: "fiction" },
-            { title: "Frankenstein", author: "Mary Shelley", description: "A tale of science, morality, and horror.", image: "Frankenstein.jpeg", category: "horror" },
-            { title: "Gone with the Wind", author: "Margaret Mitchell", description: "A romantic novel set during the American Civil War.", image: "gone with the wind.jpeg", category: "fiction" },
-            { title: "Harry Potter and the Order of the Phoenix", author: "J.K. Rowling", description: "The fifth book in the Harry Potter series.", image: "Harry Potter and the Order of the Phoenix.jpeg", category: "children" },
-            { title: "Les Misérables", author: "Victor Hugo", description: "A story of redemption and revolution in 19th-century France.", image: "Les Misérables.png", category: "classics" },
-            { title: "Mrs. Dalloway", author: "Virginia Woolf", description: "A day in the life of Clarissa Dalloway.", image: "mrs dalloway.jpeg", category: "fiction" },
-            { title: "Of Mice and Men", author: "John Steinbeck", description: "A story of friendship and dreams during the Great Depression.", image: "Of Mice and Men.jpeg", category: "fiction" },
-            { title: "The Brothers Karamazov", author: "Fyodor Dostoevsky", description: "A philosophical novel about faith, doubt, and family.", image: "the Brothers Karamazov.jpeg", category: "novels" },
-            { title: "The Count of Monte Cristo", author: "Alexandre Dumas", description: "A gripping tale of revenge and redemption.", image: "The Count of Monte Cristo.jpeg", category: "adventure" },
-            { title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", description: "A thrilling mystery novel set in Sweden.", image: "The Girl with the Dragon Tattoo.jpeg", category: "mystery" },
-            { title: "The Hobbit", author: "J.R.R. Tolkien", description: "A fantasy adventure about a reluctant hero.", image: "the hobbit.png", category: "fantasy" },
-            { title: "The Kite Runner", author: "Khaled Hosseini", description: "A story of friendship and betrayal in Afghanistan.", image: "the kite runner.jpeg", category: "fiction" },
-            { title: "The Master and Margarita", author: "Mikhail Bulgakov", description: "A satirical novel blending fantasy and politics.", image: "the master and margarita.jpeg", category: "fiction" },
-            { title: "The Old Man and the Sea", author: "Ernest Hemingway", description: "A symbolic tale of struggle and resilience.", image: "The Old Man and the Sea.jpeg", category: "novels" },
-            { title: "The Stranger", author: "Albert Camus", description: "An existential novel about alienation and absurdity.", image: "the stranger.png", category: "fiction" },
-            { title: "Lord of the Flies", author: "William Golding", description: "A chilling allegory of civilization's collapse.", image: "lord of the flies.jpeg", category: "novels" },
-            { title: "The Deep End", author: "Deborah Coates", description: "A supernatural thriller about the boundaries of life and death.", image: "deep end.jpg", category: "horror" }
+            { title: "A Little Life", author: "Hanya Yanagihara", description: "A Little Life is a 2015 novel by American writer Hanya Yanagihara. Lengthy and tackling difficult subject matter, it garnered critical acclaim, was shortlisted for the 2015 Man Booker Prize and the National Book Awards, and became a best seller.", image: "imagenes/a little life.jpg", category: "fiction" },
+            { title: "Anna Karenina", author: "Leo Tolstoy", description: "A tragic love story set in Russian high society.", image: "imagenes/anna.jpg", category: "classics" },
+            { title: "Beloved", author: "Toni Morrison", description: "A powerful story about slavery and motherhood.", image: "imagenes/beloved.jpg", category: "fiction" },
+            { title: "Catch-22", author: "Joseph Heller", description: "A satirical novel about the absurdity of war.", image: "imagenes/catch-22.jpg", category: "fiction" },
+            { title: "Frankenstein", author: "Mary Shelley", description: "A tale of science, morality, and horror.", image: "imagenes/frank.jpg", category: "horror" },
+            { title: "Gone with the Wind", author: "Margaret Mitchell", description: "A romantic novel set during the American Civil War.", image: "imagenes/gone with the wind.jpg", category: "fiction" },
+            { title: "Harry Potter and the Order of the Phoenix", author: "J.K. Rowling", description: "The fifth book in the Harry Potter series.", image: "imagenes/harrypote.jpg", category: "children" },
+            { title: "Les Misérables", author: "Victor Hugo", description: "A story of redemption and revolution in 19th-century France.", image: "imagenes/miserbles.jpg", category: "classics" },
+            { title: "Mrs. Dalloway", author: "Virginia Woolf", description: "A day in the life of Clarissa Dalloway.", image: "imagenes/Mrs. Dalloway.jpg", category: "fiction" },
+            { title: "Of Mice and Men", author: "John Steinbeck", description: "A story of friendship and dreams during the Great Depression.", image: "imagenes/Of Mice and Men.jpg", category: "fiction" },
+            { title: "The Brothers Karamazov", author: "Fyodor Dostoevsky", description: "A philosophical novel about faith, doubt, and family.", image: "imagenes/The Brothers Karamazov.jpg", category: "novels" },
+            { title: "The Count of Monte Cristo", author: "Alexandre Dumas", description: "A gripping tale of revenge and redemption.", image: "imagenes/The Count of Monte Cristo.jpg", category: "adventure" },
+            { title: "The Hobbit", author: "J.R.R. Tolkien", description: "A fantasy adventure about a reluctant hero.", image: "imagenes/The Hobbit.jpg", category: "fantasy" },
+            { title: "The Kite Runner", author: "Khaled Hosseini", description: "A story of friendship and betrayal in Afghanistan.", image: "imagenes/The Kite Runner.jpg", category: "fiction" },
+            { title: "The Master and Margarita", author: "Mikhail Bulgakov", description: "A satirical novel blending fantasy and politics.", image: "imagenes/The Master and Margarita.jpg", category: "fiction" },
+            { title: "The Old Man and the Sea", author: "Ernest Hemingway", description: "A symbolic tale of struggle and resilience.", image: "imagenes/The Old Man and the Sea.jpg", category: "novels" },
+            { title: "The Stranger", author: "Albert Camus", description: "An existential novel about alienation and absurdity.", image: "imagenes/The Stranger.jpg", category: "fiction" },
+            { title: "Lord of the Flies", author: "William Golding", description: "A chilling allegory of civilization's collapse.", image: "imagenes/Lord of the Flies.jpg", category: "novels" },
+            { title: "The Deep End", author: "Deborah Coates", description: "A supernatural thriller about the boundaries of life and death.", image: "imagenes/The Deep End.jpg", category: "horror" }
         ];
 
 
         // Science Books Array
         const scienceBooks = [
-            { title: "Brief Answers to the Big Questions", author: "Stephen Hawking", description: "A fascinating exploration of the universe and the mysteries of science.", image: "Brief Answers to the Big Questions.jpeg", genre: "science" },
-            { title: "The Gene", author: "Siddhartha Mukherjee", description: "A history of the gene and how it shapes our destiny.", image: "The Gene.jpeg", genre: "science" },
-            { title: "Sapiens", author: "Yuval Noah Harari", description: "A brief history of humankind.", image: "Sapiens.jpeg", genre: "science" },
-            { title: "Astrophysics for People in a Hurry", author: "Neil deGrasse Tyson", description: "A brief introduction to astrophysics.", image: "Astrophysics for People.jpeg", genre: "science" },
-            { title: "The Selfish Gene", author: "Richard Dawkins", description: "A classic in evolutionary biology.", image: "The Selfish Gene.jpeg", genre: "science" },
-            { title: "The Immortal Life of Henrietta Lacks", author: "Rebecca Skloot", description: "The story of a woman whose cells changed medical science.", image: "Henrietta Lacks.jpeg", genre: "science" },
-            { title: "Cosmos", author: "Carl Sagan", description: "An exploration of the universe from one of the most famous scientists.", image: "Cosmos.jpeg", genre: "science" },
-            { title: "A Brief History of Time", author: "Stephen Hawking", description: "A classic on the nature of time and the universe.", image: "A Brief History of Time.jpeg", genre: "science" },
-            { title: "The Man Who Knew Infinity", author: "Robert Kanigel", description: "The story of the mathematical genius Ramanujan.", image: "The Man Who Knew Infinity.jpeg", genre: "science" },
-            { title: "The Body", author: "Bill Bryson", description: "An exploration of the human body and its mysteries.", image: "The Body.jpeg", genre: "science" },
-            { title: "The Elegant Universe", author: "Brian Greene", description: "A journey into the world of string theory.", image: "The Elegant Universe.jpeg", genre: "science" },
-            { title: "The Origin of Species", author: "Charles Darwin", description: "The foundation of evolutionary biology.", image: "Origin of Species.jpeg", genre: "science" },
-            { title: "The Hidden Life of Trees", author: "Peter Wohlleben", description: "A fascinating look at the lives of trees.", image: "The Hidden Life of Trees.jpeg", genre: "science" },
-            { title: "The Emperor of All Maladies", author: "Siddhartha Mukherjee", description: "A biography of cancer and the search for its cure.", image: "The Emperor of All Maladies.jpeg", genre: "science" },
-            { title: "Why Evolution Is True", author: "Jerry A. Coyne", description: "An argument for the truth of evolutionary theory.", image: "Why Evolution Is True.jpeg", genre: "science" },
-            { title: "The Universe in a Nutshell", author: "Stephen Hawking", description: "An exploration of the universe and its workings.", image: "The Universe in a Nutshell.jpeg", genre: "science" },
-            { title: "The Immortalists", author: "Chloe Benjamin", description: "A story about the lives of four siblings and their fate.", image: "The Immortalists.jpeg", genre: "science" },
-            { title: "The Disappearing Spoon", author: "Sam Kean", description: "A fun exploration of the periodic table.", image: "The Disappearing Spoon.jpeg", genre: "science" },
-            { title: "A Short History of Nearly Everything", author: "Bill Bryson", description: "An introduction to the history of science.", image: "A Short History.jpeg", genre: "science" }
+            { title: "Brief Answers to the Big Questions", author: "Stephen Hawking", description: "A fascinating exploration of the universe and the mysteries of science.", image: "imagenes/Brief Answers to the Big Questions.jpeg", genre: "science" },
+            { title: "The Gene", author: "Siddhartha Mukherjee", description: "A history of the gene and how it shapes our destiny.", image: "imagenes/The Gene.jpg", genre: "science" },
+            { title: "Sapiens", author: "Yuval Noah Harari", description: "A brief history of humankind.", image: "imagenes/Sapiens.jpg", genre: "science" },
+            { title: "Astrophysics for People in a Hurry", author: "Neil deGrasse Tyson", description: "A brief introduction to astrophysics.", image: "imagenes/Astrophysics for People in a Hurry.jpg", genre: "science" },
+            { title: "The Selfish Gene", author: "Richard Dawkins", description: "A classic in evolutionary biology.", image: "imagenes/The Selfish Gene.jpg", genre: "science" },
+            { title: "The Immortal Life of Henrietta Lacks", author: "Rebecca Skloot", description: "The story of a woman whose cells changed medical science.", image: "imagenes/The Immortal Life of Henrietta Lacks.jpg", genre: "science" },
+            { title: "Cosmos", author: "Carl Sagan", description: "An exploration of the universe from one of the most famous scientists.", image: "imagenes/Cosmos.jpg", genre: "science" },
+            { title: "A Brief History of Time", author: "Stephen Hawking", description: "A classic on the nature of time and the universe.", image: "imagenes/A Brief History of Time.jpg", genre: "science" },
+            { title: "The Man Who Knew Infinity", author: "Robert Kanigel", description: "The story of the mathematical genius Ramanujan.", image: "imagenes/The Man Who Knew Infinity.jpg", genre: "science" },
+            { title: "The Body", author: "Bill Bryson", description: "An exploration of the human body and its mysteries.", image: "imagenes/The Body.jpg", genre: "science" },
+            { title: "The Elegant Universe", author: "Brian Greene", description: "A journey into the world of string theory.", image: "imagenes/The Elegant Universe.jpg", genre: "science" },
+            { title: "The Origin of Species", author: "Charles Darwin", description: "The foundation of evolutionary biology.", image: "imagenes/The Origin of Species.jpg", genre: "science" },
+            { title: "The Hidden Life of Trees", author: "Peter Wohlleben", description: "A fascinating look at the lives of trees.", image: "imagenes/The Hidden Life of Trees.jpg", genre: "science" },
+            { title: "The Emperor of All Maladies", author: "Siddhartha Mukherjee", description: "A biography of cancer and the search for its cure.", image: "imagenes/The Emperor of All Maladies.jpg", genre: "science" },
+            { title: "Why Evolution Is True", author: "Jerry A. Coyne", description: "An argument for the truth of evolutionary theory.", image: "imagenes/Why Evolution Is True.jpg", genre: "science" },
+            { title: "The Universe in a Nutshell", author: "Stephen Hawking", description: "An exploration of the universe and its workings.", image: "imagenes/The Universe in a Nutshell.jpg", genre: "science" },
+            { title: "The Immortalists", author: "Chloe Benjamin", description: "A story about the lives of four siblings and their fate.", image: "imagenes/The Immortalists.jpg", genre: "science" },
+            { title: "The Disappearing Spoon", author: "Sam Kean", description: "A fun exploration of the periodic table.", image: "imagenes/The Disappearing Spoon.jpg", genre: "science" },
+            { title: "A Short History of Nearly Everything", author: "Bill Bryson", description: "An introduction to the history of science.", image: "imagenes/A Short History of Nearly Everything.jpg", genre: "science" }
         ];
 
 
         const crimeBooks = [
-        { title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", description: "A thrilling mystery novel set in Sweden.", image: "The Girl with the Dragon Tattoo.jpeg", category: "crime" },
-        { title: "The Godfather", author: "Mario Puzo", description: "A classic mafia saga.", image: "The Godfather.jpeg", category: "crime" },
-        { title: "The Silence of the Lambs", author: "Thomas Harris", description: "A psychological horror crime thriller.", image: "The Silence of the Lambs.jpeg", category: "crime" },
-        { title: "Gone Girl", author: "Gillian Flynn", description: "A gripping thriller about a woman who goes missing.", image: "Gone Girl.jpeg", category: "crime" },
-        { title: "In Cold Blood", author: "Truman Capote", description: "A true crime classic.", image: "In Cold Blood.jpeg", category: "crime" }
+        { title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", description: "A thrilling mystery novel set in Sweden.", image: "imagenes/The Girl with the Dragon Tattoo.jpg", category: "crime" },
+        { title: "The Godfather", author: "Mario Puzo", description: "A classic mafia saga.", image: "imagenes/The Godfather.jpg", category: "crime" },
+        { title: "The Silence of the Lambs", author: "Thomas Harris", description: "A psychological horror crime thriller.", image: "imagenes/The Silence of the Lambs.jpg", category: "crime" },
+        { title: "Gone Girl", author: "Gillian Flynn", description: "A gripping thriller about a woman who goes missing.", image: "imagenes/Gone Girl.jpg", category: "crime" },
+        { title: "In Cold Blood", author: "Truman Capote", description: "A true crime classic.", image: "imagenes/In Cold Blood.jpg", category: "crime" }
     ];
 
     const horrorBooks = [
-        { title: "It", author: "Stephen King", description: "A horrifying tale of an ancient evil.", image: "It.jpeg", category: "horror" },
-        { title: "The Shining", author: "Stephen King", description: "A chilling story about a haunted hotel.", image: "The Shining.jpeg", category: "horror" },
-        { title: "Dracula", author: "Bram Stoker", description: "A gothic horror about the famous vampire.", image: "Dracula.jpeg", category: "horror" },
-        { title: "Frankenstein", author: "Mary Shelley", description: "A classic horror novel about the creation of a monster.", image: "Frankenstein.jpeg", category: "horror" },
-        { title: "The Haunting of Hill House", author: "Shirley Jackson", description: "A terrifying ghost story.", image: "The Haunting of Hill House.jpeg", category: "horror" }
+        { title: "It", author: "Stephen King", description: "A horrifying tale of an ancient evil.", image: "imagenes/it.jpg", category: "horror" },
+        { title: "The Shining", author: "Stephen King", description: "A chilling story about a haunted hotel.", image: "imagenes/The Shining.jpg", category: "horror" },
+        { title: "Dracula", author: "Bram Stoker", description: "A gothic horror about the famous vampire.", image: "imagenes/Dracula.jpg", category: "horror" },
+        { title: "The Haunting of Hill House", author: "Shirley Jackson", description: "A terrifying ghost story.", image: "imagenes/he Haunting of Hill House.jpg", category: "horror" }
     ];
 
     const fantasyBooks = [
-        { title: "The Hobbit", author: "J.R.R. Tolkien", description: "A fantasy adventure about a reluctant hero.", image: "The Hobbit.jpeg", category: "fantasy" },
-        { title: "Harry Potter and the Sorcerer's Stone", author: "J.K. Rowling", description: "The first book in the famous wizard series.", image: "Harry Potter.jpeg", category: "fantasy" },
-        { title: "The Name of the Wind", author: "Patrick Rothfuss", description: "A story about the magical adventures of a young man.", image: "The Name of the Wind.jpeg", category: "fantasy" },
-        { title: "A Game of Thrones", author: "George R.R. Martin", description: "A political fantasy set in a medieval world.", image: "A Game of Thrones.jpeg", category: "fantasy" },
-        { title: "The Priory of the Orange Tree", author: "Samantha Shannon", description: "A feminist epic fantasy about dragons and magic.", image: "The Priory of the Orange Tree.jpeg", category: "fantasy" }
+        { title: "Harry Potter and the Sorcerer's Stone", author: "J.K. Rowling", description: "The first book in the famous wizard series.", image: "imagenes/Harry Potter and the Sorcerer's Stone.jpg", category: "fantasy" },
+        { title: "The Name of the Wind", author: "Patrick Rothfuss", description: "A story about the magical adventures of a young man.", image: "imagenes/The Name of the Wind.jpg", category: "fantasy" },
+        { title: "A Game of Thrones", author: "George R.R. Martin", description: "A political fantasy set in a medieval world.", image: "imagenes/A Game of Thrones.jpg", category: "fantasy" },
+        { title: "The Priory of the Orange Tree", author: "Samantha Shannon", description: "A feminist epic fantasy about dragons and magic.", image: "imagenes/The Priory of the Orange Tree.jpg", category: "fantasy" }
     ];
     
 
     const poetryBooks = [
-    { title: "The Waste Land", author: "T.S. Eliot", description: "A landmark in modernist poetry.", image: "The Waste Land.jpeg", category: "poetry" },
-    { title: "Leaves of Grass", author: "Walt Whitman", description: "A collection of poems celebrating individuality and nature.", image: "Leaves of Grass.jpeg", category: "poetry" },
-    { title: "The Raven", author: "Edgar Allan Poe", description: "A narrative poem about grief and loss.", image: "The Raven.jpeg", category: "poetry" },
-    { title: "The Divine Comedy", author: "Dante Alighieri", description: "An epic poem describing the journey through Hell, Purgatory, and Heaven.", image: "The Divine Comedy.jpeg", category: "poetry" },
-    { title: "The Iliad", author: "Homer", description: "An epic poem of the Trojan War.", image: "The Iliad.jpeg", category: "poetry" }
+    { title: "The Waste Land", author: "T.S. Eliot", description: "A landmark in modernist poetry.", image: "imagenes/The Waste Land.jpg", category: "poetry" },
+    { title: "Leaves of Grass", author: "Walt Whitman", description: "A collection of poems celebrating individuality and nature.", image: "imagenes/Leaves of Grass.jpg", category: "poetry" },
+    { title: "The Raven", author: "Edgar Allan Poe", description: "A narrative poem about grief and loss.", image: "imagenes/The Raven.jpg", category: "poetry" },
+    { title: "The Divine Comedy", author: "Dante Alighieri", description: "An epic poem describing the journey through Hell, Purgatory, and Heaven.", image: "imagenes/The Divine Comedy.jpg", category: "poetry" },
+    { title: "The Iliad", author: "Homer", description: "An epic poem of the Trojan War.", image: "imagenes/The Iliad.jpg", category: "poetry" }
 ];
 
 const shortStoryBooks = [
-    { title: "The Lottery", author: "Shirley Jackson", description: "A short story about a community ritual that ends in horror.", image: "The Lottery.jpeg", category: "short-story" },
-    { title: "The Tell-Tale Heart", author: "Edgar Allan Poe", description: "A short story about guilt and madness.", image: "The Tell-Tale Heart.jpeg", category: "short-story" },
-    { title: "The Necklace", author: "Guy de Maupassant", description: "A short story about vanity and fate.", image: "The Necklace.jpeg", category: "short-story" },
-    { title: "The Gift of the Magi", author: "O. Henry", description: "A story about love, sacrifice, and irony.", image: "The Gift of the Magi.jpeg", category: "short-story" },
-    { title: "The Most Dangerous Game", author: "Richard Connell", description: "A suspenseful short story about a deadly game of survival.", image: "The Most Dangerous Game.jpeg", category: "short-story" }
+    { title: "The Lottery", author: "Shirley Jackson", description: "A short story about a community ritual that ends in horror.", image: "imagenes/The Lottery.jpg", category: "short-story" },
+    { title: "The Tell-Tale Heart", author: "Edgar Allan Poe", description: "A short story about guilt and madness.", image: "imagenes/The Tell-Tale Heart.jpg", category: "short-story" },
+    { title: "The Necklace", author: "Guy de Maupassant", description: "A short story about vanity and fate.", image: "imagenes/The Necklace.jpg", category: "short-story" },
+    { title: "The Gift of the Magi", author: "O. Henry", description: "A story about love, sacrifice, and irony.", image: "imagenes/The Gift of the Magi.jpg", category: "short-story" },
+    { title: "The Most Dangerous Game", author: "Richard Connell", description: "A suspenseful short story about a deadly game of survival.", image: "imagenes/The Most Dangerous Game.jpg", category: "short-story" }
 ];
 const mysteryBooks = [
-    { title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", description: "A thrilling mystery about a journalist and a hacker solving a decades-old disappearance.", image: "The Girl with the Dragon Tattoo.jpeg", category: "mystery" },
-    { title: "The Sherlock Holmes Stories", author: "Arthur Conan Doyle", description: "A series of detective stories featuring Sherlock Holmes.", image: "Sherlock Holmes.jpeg", category: "mystery" },
-    { title: "Gone Girl", author: "Gillian Flynn", description: "A gripping thriller about a missing wife and a suspicious husband.", image: "Gone Girl.jpeg", category: "mystery" },
-    { title: "Big Little Lies", author: "Liane Moriarty", description: "A mystery surrounding the lives of a group of mothers and their secrets.", image: "Big Little Lies.jpeg", category: "mystery" },
-    { title: "The Secret History", author: "Donna Tartt", description: "A psychological thriller about a group of college students involved in a murder.", image: "The Secret History.jpeg", category: "mystery" }
+    { title: "The Sherlock Holmes Stories", author: "Arthur Conan Doyle", description: "A series of detective stories featuring Sherlock Holmes.", image: "imagenes/The Sherlock Holmes Stories.jpg", category: "mystery" },
+    { title: "Big Little Lies", author: "Liane Moriarty", description: "A mystery surrounding the lives of a group of mothers and their secrets.", image: "imagenes/Big Little Lies.jpg", category: "mystery" },
+    { title: "The Secret History", author: "Donna Tartt", description: "A psychological thriller about a group of college students involved in a murder.", image: "imagenes/The Secret History.jpg", category: "mystery" }
 ];
 const novelsBooks = [
-    { title: "Pride and Prejudice", author: "Jane Austen", description: "A romantic novel that explores themes of marriage and class.", image: "Pride and Prejudice.jpeg", category: "novels" },
-    { title: "1984", author: "George Orwell", description: "A dystopian novel about totalitarianism and surveillance.", image: "1984.jpeg", category: "novels" },
-    { title: "The Catcher in the Rye", author: "J.D. Salinger", description: "A coming-of-age novel about teenage rebellion and alienation.", image: "The Catcher in the Rye.jpeg", category: "novels" },
-    { title: "To Kill a Mockingbird", author: "Harper Lee", description: "A novel about racial injustice and moral growth.", image: "To Kill a Mockingbird.jpeg", category: "novels" },
-    { title: "Moby-Dick", author: "Herman Melville", description: "A story of obsession, vengeance, and the sea.", image: "Moby Dick.jpeg", category: "novels" }
+    { title: "Pride and Prejudice", author: "Jane Austen", description: "A romantic novel that explores themes of marriage and class.", image: "imagenes/Pride and Prejudice.jpg", category: "novels" },
+    { title: "1984", author: "George Orwell", description: "A dystopian novel about totalitarianism and surveillance.", image: "imagenes/1984.jpg", category: "novels" },
+    { title: "The Catcher in the Rye", author: "J.D. Salinger", description: "A coming-of-age novel about teenage rebellion and alienation.", image: "imagenes/The Catcher in the Rye.jpg", category: "novels" },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", description: "A novel about racial injustice and moral growth.", image: "imagenes/To Kill a Mockingbird.jpg", category: "novels" },
+    { title: "Moby-Dick", author: "Herman Melville", description: "A story of obsession, vengeance, and the sea.", image: "imagenes/Moby-Dick.jpg", category: "novels" }
 ];
 const adventureBooks = [
-    { title: "The Call of the Wild", author: "Jack London", description: "An adventure story about a dog’s struggle for survival in the wilderness.", image: "The Call of the Wild.jpeg", category: "adventure" },
-    { title: "The Adventures of Huckleberry Finn", author: "Mark Twain", description: "A classic adventure novel set along the Mississippi River.", image: "Huckleberry Finn.jpeg", category: "adventure" },
-    { title: "Treasure Island", author: "Robert Louis Stevenson", description: "A pirate adventure about treasure hunting and betrayal.", image: "Treasure Island.jpeg", category: "adventure" },
-    { title: "Journey to the Center of the Earth", author: "Jules Verne", description: "An adventure novel about a journey into the Earth’s interior.", image: "Journey to the Center.jpeg", category: "adventure" },
-    { title: "Around the World in 80 Days", author: "Jules Verne", description: "An adventurous race to circumnavigate the globe.", image: "Around the World in 80 Days.jpeg", category: "adventure" }
+    { title: "The Call of the Wild", author: "Jack London", description: "An adventure story about a dog’s struggle for survival in the wilderness.", image: "imagenes/The Call of the Wild.jpg", category: "adventure" },
+    { title: "The Adventures of Huckleberry Finn", author: "Mark Twain", description: "A classic adventure novel set along the Mississippi River.", image: "imagenes/Huckleberry Finn.jpg", category: "adventure" },
+    { title: "Treasure Island", author: "Robert Louis Stevenson", description: "A pirate adventure about treasure hunting and betrayal.", image: "imagenes/Treasure Island.jpg", category: "adventure" },
+    { title: "Journey to the Center of the Earth", author: "Jules Verne", description: "An adventure novel about a journey into the Earth’s interior.", image: "imagenes/Journey to the Center of the Earth.jpg", category: "adventure" },
+    { title: "Around the World in 80 Days", author: "Jules Verne", description: "An adventurous race to circumnavigate the globe.", image: "imagenes/Around the World in 80 Days.jpg", category: "adventure" }
 ];
 const classicsBooks = [
-    { title: "Don Quixote", author: "Miguel de Cervantes", description: "A classic tale about a man who believes he is a knight.", image: "Don Quixote.jpeg", category: "classics" },
-    { title: "Crime and Punishment", author: "Fyodor Dostoevsky", description: "A philosophical novel about morality and guilt.", image: "Crime and Punishment.jpeg", category: "classics" },
-    { title: "War and Peace", author: "Leo Tolstoy", description: "A historical novel set during the Napoleonic wars.", image: "War and Peace.jpeg", category: "classics" },
-    { title: "The Great Gatsby", author: "F. Scott Fitzgerald", description: "A novel about the American Dream and the jazz age.", image: "The Great Gatsby.jpeg", category: "classics" },
-    { title: "The Grapes of Wrath", author: "John Steinbeck", description: "A novel about the plight of migrant workers during the Great Depression.", image: "The Grapes of Wrath.jpeg", category: "classics" }
+    { title: "Don Quixote", author: "Miguel de Cervantes", description: "A classic tale about a man who believes he is a knight.", image: "imagenes/Don Quixote.jpg", category: "classics" },
+    { title: "Crime and Punishment", author: "Fyodor Dostoevsky", description: "A philosophical novel about morality and guilt.", image: "imagenes/Crime and Punishment.jpg", category: "classics" },
+    { title: "War and Peace", author: "Leo Tolstoy", description: "A historical novel set during the Napoleonic wars.", image: "imagenes/War and Peace.jpg", category: "classics" },
+    { title: "The Great Gatsby", author: "F. Scott Fitzgerald", description: "A novel about the American Dream and the jazz age.", image: "imagenes/The Great Gatsby.jpg", category: "classics" },
+    { title: "The Grapes of Wrath", author: "John Steinbeck", description: "A novel about the plight of migrant workers during the Great Depression.", image: "imagenes/The Grapes of Wrath.jpeg", category: "classics" }
 ];
 const biographyBooks = [
-    { title: "The Diary of a Young Girl", author: "Anne Frank", description: "The diary of a Jewish girl hiding from the Nazis.", image: "The Diary of a Young Girl.jpeg", category: "biography" },
-    { title: "Long Walk to Freedom", author: "Nelson Mandela", description: "The autobiography of Nelson Mandela about his life and struggle for freedom.", image: "Long Walk to Freedom.jpeg", category: "biography" },
-    { title: "Steve Jobs", author: "Walter Isaacson", description: "The biography of the co-founder of Apple Inc.", image: "Steve Jobs.jpeg", category: "biography" },
-    { title: "Becoming", author: "Michelle Obama", description: "The memoir of the former First Lady of the United States.", image: "Becoming.jpeg", category: "biography" },
-    { title: "Educated", author: "Tara Westover", description: "A memoir about a girl who grows up in a strict and abusive family.", image: "Educated.jpeg", category: "biography" }
+    { title: "The Diary of a Young Girl", author: "Anne Frank", description: "The diary of a Jewish girl hiding from the Nazis.", image: "imagenes/The Diary of a Young Girl.webp", category: "biography" },
+    { title: "Long Walk to Freedom", author: "Nelson Mandela", description: "The autobiography of Nelson Mandela about his life and struggle for freedom.", image: "imagenes/Long Walk to Freedom.jpg", category: "biography" },
+    { title: "Steve Jobs", author: "Walter Isaacson", description: "The biography of the co-founder of Apple Inc.", image: "imagenes/Steve Jobs.jpg", category: "biography" },
+    { title: "Becoming", author: "Michelle Obama", description: "The memoir of the former First Lady of the United States.", image: "imagenes/Becoming.jpg", category: "biography" },
+    { title: "Educated", author: "Tara Westover", description: "A memoir about a girl who grows up in a strict and abusive family.", image: "imagenes/Educated.jpg", category: "biography" }
 ];
 
     // All books (fiction, science, crime, horror, fantasy combined for "all" category)

@@ -3,66 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-
     <header>
         <h1>Your Cart</h1>
-        <a href="index.html" class="back-to-home">Back to Home</a>
     </header>
 
-    <section id="cart-display" class="cart-page">
-        <!-- Cart items will be displayed here dynamically -->
+    <section class="cart-container">
+        <h2>Your Cart</h2>
+        <div class="cart-items">
+            <!-- Cart items will be displayed dynamically here -->
+        </div>
+        <div class="cart-summary">
+            <div class="total">Total: $0.00</div>
+            <button class="checkout" onclick="checkout()">Checkout</button>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Your Bookstore</p>
-    </footer>
-
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    // Display books in cart when page loads
-    displayCart();
-});
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItemsDiv = document.querySelector(".cart-items");
+        let total = 0;
 
-// Function to display books in the cart
-function displayCart() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartDisplay = document.getElementById("cart-display");
-
-    if (cart.length > 0) {
-        cart.forEach(book => {
-            const bookCard = document.createElement("div");
-            bookCard.classList.add("book-card");
-
-            bookCard.innerHTML = `
-                <img src="${book.image}" alt="Book Cover">
-                <div>
-                    <h3>${book.title}</h3>
-                    <p>Author: ${book.author}</p>
-                    <p>Publisher: ${book.publisher}</p>
-                    <a href="#" class="remove-btn" onclick="removeFromCart('${book.id}')">Remove</a>
+        // Display cart items dynamically
+        cart.forEach(item => {
+            const cartItem = document.createElement("div");
+            cartItem.className = "cart-item";
+            cartItem.innerHTML = `
+                <img src="${item.image}" alt="${item.title}" class="item-image">
+                <div class="item-details">
+                    <div class="item-title">${item.title}</div>
+                    <div class="item-price">$${item.price}</div>
                 </div>
+                <button class="remove-item" onclick="removeItem(${item.id})">Remove</button>
             `;
-
-            cartDisplay.appendChild(bookCard);
+            cartItemsDiv.appendChild(cartItem);
+            total += item.price;
         });
-    } else {
-        cartDisplay.innerHTML = "<p>Your cart is empty.</p>";
-    }
-}
 
-// Function to remove a book from the cart
-function removeFromCart(bookId) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart = cart.filter(item => item.id !== bookId); // Remove book from cart
+        // Update the total price
+        document.querySelector(".total").textContent = "Total: $" + total.toFixed(2);
 
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
-    displayCart(); // Re-render the cart
-}
+        // Remove item from cart
+        function removeItem(itemId) {
+            const updatedCart = cart.filter(item => item.id !== itemId);
+            localStorage.setItem("cart", JSON.stringify(updatedCart));
+            location.reload(); // Reload the page to reflect changes
+        }
 
+        // Redirect to payment page
+        function checkout() {
+            window.location.href = "payment.html"; // Redirect to payment page
+        }
     </script>
 </body>
 </html>

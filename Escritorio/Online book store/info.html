@@ -8,31 +8,40 @@
 </head>
 <body>
     <header>
-        <h1 class="animated-heading">Book Details</h1>
+        <h1>Book Details</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
     </header>
 
-    <section id="book-details">
-        <div class="book-info">
-            <div class="book-image">
-                <img id="book-image" src="" alt="Book Cover">
-            </div>
-            <div class="book-description">
-                <h2 id="book-title"></h2>
-                <p id="book-description-text"></p>
-                <p class="author" id="book-author"></p>
-            </div>
+    <section class="book-info">
+        <div class="book-image">
+            <img id="book-image" src="" alt="Book Cover">
+        </div>
+        <div class="book-description">
+            <h2 id="book-title">Book Title</h2>
+            <p id="book-description-text">Description of the book.</p>
+            <p class="author" id="book-author">By: Author Name</p>
+            <button id="buy-now" onclick="addToCart()">Buy Now</button>
         </div>
     </section>
 
     <script>
-        // Load book details from localStorage
         const bookDetails = JSON.parse(localStorage.getItem("bookDetails"));
-        
-        // Display the details
         document.getElementById("book-title").textContent = bookDetails.title;
         document.getElementById("book-description-text").textContent = bookDetails.description;
         document.getElementById("book-author").textContent = "By: " + bookDetails.author;
         document.getElementById("book-image").src = bookDetails.image;
+
+        function addToCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(bookDetails);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            window.location.href = "cart.html"; 
+        }
     </script>
 </body>
 </html>

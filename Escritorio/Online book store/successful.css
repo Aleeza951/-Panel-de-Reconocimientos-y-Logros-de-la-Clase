@@ -1,0 +1,38 @@
+/* Success Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+section h1 {
+    font-size: 48px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
