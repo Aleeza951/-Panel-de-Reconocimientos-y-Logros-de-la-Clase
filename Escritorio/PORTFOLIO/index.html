@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queen Aleeza Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Lab</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="arrow">&#8594;</div>
+    <div class="intro-text">
+      <h2>Hello! I'm Aleeza</h2>
+      <p class="quote">"La creatividad es la inteligencia divirtiéndose."</p>
+    </div>
+    <div class="profile-pic">
+      <img src="Snapchat(1).jpg" alt="Aleeza's Photo" />
+    </div>
+  </section>
+
+  <section class="info">
+    <h1>I’m a Web Developer</h1>
+    <p>Currently I completed my course of Web Development</p>
+    <p class="sobre-mi">¡Hola! Soy Aleeza Sajid, una desarrolladora web. Me apasiona crear sitios web accesibles, funcionales y visualmente atractivos.
+        Comencé mi viaje con HTML y CSS, y ahora estoy expandiendo mis habilidades con JavaScript y otras tecnologías. <br><br> 
+        En mi tiempo libre, me gusta experimentar con nuevas tecnologías y contribuir a proyectos de código abierto. 
+        ¡Estoy emocionada por colaborar y seguir creciendo como desarrolladora!</p>
+  </section>
+
+  <section class="chart-section">
+    <h2 class="journey-heading">My Web Development Journey</h2>
+    <canvas id="myChart" width="500" height="250"></canvas>
+</section>
+
+<section class="featured-project-box">
+  <div class="project-content">
+    <div class="project-text">
+      <h2>Relojes - Online store</h2>
+      <p>This is an interactive clock application built using html css and javascript. It features real-time clock updates, multiple time zone support, and a sleek design for a modern feel.</p>
+      <ul>
+        <li>🕒 Vue.js Components</li>
+        <li>🌍 Multiple Time Zones</li>
+        <li>✨ Smooth Animations</li>
+      </ul>
+    </div>
+    <div class="project-image-gallery">
+      <img src="relojes.png" alt="Clock Screenshot 1" />
+    </div>
+  </div>
+  <!-- Button moved outside project content but inside project box -->
+  <a href="https://tienda-ghari.netlify.app/" class="project-btn">View Project</a>
+</section>
+
+<section class="featured-project-box">
+  <div class="project-content">
+    <div class="project-text">
+      <h2>Bizballon</h2>
+      <p>This project is about the Bizballon platform, which helps in managing business resources and connecting people in an efficient and productive manner. The platform integrates real-time data and analytics to enhance business operations.</p>
+      <ul>
+        <li>📊 Real-time Data Integration</li>
+        <li>⚙️ Business Management Tools</li>
+        <li>💼 User-friendly Interface</li>
+      </ul>
+    </div>
+    <div class="project-image-gallery">
+      <img src="bizballon.png" alt="Bizballon Screenshot 1" />
+    </div>
+  </div>
+  <!-- Button moved outside project content but inside project box -->
+  <a href="https://coruscating-marigold-4e03cc.netlify.app/" class="project-btn">View Project</a>
+</section>
+
+<section class="featured-project-box">
+  <div class="project-content">
+    <div class="project-text">
+      <h2>Success-Hub</h2>
+      <p>This landing page highlights the success stories of different projects. It's designed to motivate and inspire others who want to pursue web development and other creative journeys.</p>
+      <ul>
+        <li>🚀 Showcasing Achievements</li>
+        <li>🌟 Real-world Impact</li>
+        <li>💪 Inspiration for Future Projects</li>
+      </ul>
+    </div>
+    <div class="project-image-gallery">
+      <img src="successhub.png" alt="Success Screenshot 1" />
+    </div>
+  </div>
+  <!-- Button moved outside project content but inside project box -->
+  <a href="https://venerable-donut-a69a3b.netlify.app/" class="project-btn">View Project</a>
+</section>
+
+<section class="heading-box">
+  <div class="box">
+    <h2 id="education-certifications">📚 Educación y Certificaciones</h2>
+    <p>🎓 <strong>Curso de Desarrollo Web</strong> - PEÑASCAL KOOPERATIBA (2024-2025)</p>
+  </div>
+
+  <div class="box">
+    <h2 id="professional-goal">🎯 Objetivo Profesional</h2>
+    <p>📌 "Soy una desarrolladora web en constante aprendizaje, apasionada por crear soluciones digitales accesibles y de alto rendimiento..."</p>
+  </div>
+</section>
+
+<section class="heading-box">
+  <div class="box">
+    <h2 id="languages-soft-skills">🌍 Idiomas y Habilidades Blandas</h2>
+    <p>🗣️ <strong>Español</strong> - Intermedio</p>
+    <p>🗣️ <strong>Inglés</strong> - Intermedio</p>
+    <p>🗣️ <strong>Urdu</strong> - Nativo</p>
+    <ul>
+      <li>💬 Trabajo en equipo</li>
+      <li>🎯 Resolución de problemas</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2 id="work-process">🧑‍💻 Proceso de Trabajo</h2>
+    <ul>
+      <li>📋 Planificación y bocetos</li>
+      <li>🎨 Diseño en Figma</li>
+      <li>🔧 Desarrollo en HTML, CSS, JavaScript</li>
+      <li>🚀 Optimización y pruebas</li>
+      <li>✅ Publicación y mantenimiento</li>
+    </ul>
+  </div>
+</section>
+
+  
+  
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Python', 'SQL'], // Updated labels
+        datasets: [{
+          label: 'Skills Level',
+          data: [90, 85, 60, 70, 50, 40], // Updated skill levels (for JS and SQL)
+          backgroundColor: [
+            'rgba(54, 162, 235, 0.2)',  // Blue for HTML
+            'rgba(75, 192, 192, 0.2)',  // Green for CSS
+            'rgba(255, 159, 64, 0.2)',  // Orange for JavaScript
+            'rgba(153, 102, 255, 0.2)', // Purple for Vue.js
+            'rgba(255, 99, 132, 0.2)',  // Red for Python
+            'rgba(255, 206, 86, 0.2)'   // Yellow for SQL
+          ],
+          borderColor: [
+            'rgba(54, 162, 235, 1)',  // Blue for HTML
+            'rgba(75, 192, 192, 1)',  // Green for CSS
+            'rgba(255, 159, 64, 1)',  // Orange for JavaScript
+            'rgba(153, 102, 255, 1)', // Purple for Vue.js
+            'rgba(255, 99, 132, 1)',  // Red for Python
+            'rgba(255, 206, 86, 1)'   // Yellow for SQL
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+  
+</body>
+</html>

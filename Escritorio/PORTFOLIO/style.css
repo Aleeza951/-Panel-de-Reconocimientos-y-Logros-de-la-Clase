@@ -1,0 +1,386 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 76, 96, 0.2);
+    animation: slideDown 1s ease-out;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+    position: relative;
+    left: 25rem;
+  }
+  
+  nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff4c60;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+  }
+  
+  nav ul li:hover::after {
+    width: 100%;
+  }
+  
+  nav ul li:hover {
+    color: #ff4c60;
+  }
+  
+  
+  .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    text-align: right;
+    color: #ff4c60;
+  }
+  
+  .profile-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-pic img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ff4c60;
+    box-shadow: 0 4px 20px rgba(255, 76, 96, 0.4);
+    position: relative;
+
+  }
+  
+  .arrow {
+    font-size: 40px;
+    animation: bounce 1s infinite;
+    color: #ff4c60;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .intro-text h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #aaa;
+  }
+  
+  .profile-pic img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ff4c60;
+  }
+  
+  .info {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .info h1 {
+    font-size: 36px;
+    color: #ff4c60;
+    position: relative;
+    bottom: 6rem;
+    animation: pulse-border 1.5s infinite;
+  }
+  
+  @keyframes pulse-border {
+    0% {
+      text-shadow: 0 0 5px #ff4c60;
+    }
+    100% {
+      text-shadow: 0 0 20px #ff4c60, 0 0 30px #ff4c60;
+    }
+  }
+  
+  .info p {
+    font-size: 18px;
+    margin: 10px 0;
+    position: relative;
+    bottom: 8rem;
+  }
+  .sobre-mi {
+    font-size: 20px;
+    font-family: 'Lora', serif; /* Lora font */
+    color: #444;
+    line-height: 1.8;
+    margin: 15px 0;
+    text-align: center;
+}
+.journey-heading {
+    font-size: 36px;
+    color: #ff4c60;
+    position: relative;
+    bottom: 6rem;
+    animation: pulse-border 1.5s infinite;
+    position: relative;
+    left: 30rem;
+  }
+  @keyframes pulse-border {
+    0% {
+      text-shadow: 0 0 5px #ff4c60;
+    }
+    100% {
+      text-shadow: 0 0 20px #ff4c60, 0 0 30px #ff4c60;
+    }
+  }
+  .chart-section canvas {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    bottom: 6rem;
+  }
+  .featured-project-box {
+    background-color: #1a1a1a;
+    border: 2px solid #ff4c60;
+    border-radius: 16px;
+    padding: 20px; /* Reduced padding to make the box smaller */
+    margin: 30px auto; /* Centers the box horizontally */
+    box-shadow: 0 0 20px rgba(255, 76, 96, 0.3);
+    max-width: 800px; /* Controls the maximum width of the box */
+  }
+  
+  .project-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Reduced gap between content */
+  }
+  
+  .project-text {
+    flex: 1;
+    color: #fff;
+  }
+  
+  .project-text h2 {
+    font-size: 24px; /* Adjusted font size */
+    color: #ff4c60;
+    margin-bottom: 15px;
+  }
+  
+  .project-text p {
+    font-size: 14px; /* Adjusted font size */
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
+  .project-text ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .project-text ul li {
+    margin: 6px 0;
+    color: #bbb;
+  }
+  
+  .project-image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .project-image-gallery img {
+    width: 150px; /* Reduced image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 76, 96, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-btn {
+    display: block; /* Ensures the button takes the full width and is centered below */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333; /* Dark color for button */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 180px; /* Slightly smaller width */
+    margin-left: auto; /* Centers the button horizontally */
+    margin-right: auto; /* Centers the button horizontally */
+    transition: background-color 0.3s;
+  }
+  
+  .project-btn:hover {
+    background-color: #555; /* Slightly lighter color on hover */
+  }
+  
+/* Box for Grouping the Headings */
+.heading-box {
+  display: flex;
+  justify-content: center; /* Centering the boxes */
+  gap: 20px; /* Gap between the boxes */
+  margin-bottom: 40px;
+}
+
+/* Styling for Each Box */
+.box {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;  /* Reduced padding */
+  width: 35%; /* Much smaller width */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;  /* Center text inside the box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ff4c60;
+
+}
+
+.box:hover {
+  transform: translateY(-8px); /* Slight upward movement on hover */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading Style */
+#education-certifications, #professional-goal, #languages-soft-skills, #work-process {
+  font-size: 26px;  /* Slightly smaller font */
+  color: #ff4c60;
+  margin-bottom: 15px;
+  position: relative;
+  text-transform: uppercase;  /* Uppercase for a unique look */
+  font-weight: bold;
+}
+
+/* Underline Effect on Headings */
+#education-certifications::after,
+#professional-goal::after,
+#languages-soft-skills::after,
+#work-process::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #ff4c60;
+}
+
+/* Text Styling Inside Boxes */
+.box p, .box ul {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.box ul {
+  padding-left: 20px;
+}
+
+.box ul li {
+  margin: 8px 0;
+  color: #bbb;
+}
+
+/* Add some space between the boxes and the content below */
+.heading-box .box:first-child {
+  margin-right: 20px; /* Add some space between the first box and the second one */
+}
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center align the icons */
+    gap: 20px; /* Space between icons */
+    margin-top: 30px; /* Add margin above the icons */
+  }
+  
+  .social-icons a {
+    font-size: 24px; /* Size of the icons */
+    color: #fff; /* Color of the icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .social-icons a:hover {
+    color: #ff4c60; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+
+/* Neon effect on hover */
+.social-icons a:hover {
+  color: #fff; /* White color for the text when hovered */
+  text-shadow: 0 0 5px #c72a78, 0 0 10px #c72a78, 0 0 15px #c72a78, 0 0 20px #c72a78; /* Neon glow */
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Neon pulse animation */
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px #c72a78, 0 0 10px #c72a78, 0 0 15px #c72a78, 0 0 20px #c72a78;
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    text-shadow: 0 0 10px #c72a78, 0 0 20px #c72a78, 0 0 30px #c72a78, 0 0 40px #c72a78; /* Bigger glow */
+    transform: scale(1.1); /* Slightly enlarged size */
+  }
+  100% {
+    text-shadow: 0 0 5px #c72a78, 0 0 10px #c72a78, 0 0 15px #c72a78, 0 0 20px #c72a78;
+    transform: scale(1); /* Back to normal size */
+  }
+}
