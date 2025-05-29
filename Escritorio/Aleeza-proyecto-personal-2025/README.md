@@ -52,4 +52,4 @@ Asegúrate de subir tus capturas en assets/images/ para que aparezcan correctame
 
 Aleeza Sajid – Desarrolladora web
 📍 Actualmente en España
-💼 Proyecto final del curso 2025
+💼 Proyecto final del curso 
